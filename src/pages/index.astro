@@ -1,9 +1,14 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import Hero from '../components/HeroHome.astro';
+import About from "../components/About.astro";
+
+import HomeData from '../content/pages/home.json';
+import GeneralData from '../content/general/general.json';
 
 ---
 
 <MainLayout title="Home">
-	<Hero />
+	<Hero HeroData={HomeData.hero} GeneralData={GeneralData}/>
+	<About AboutData={HomeData.about}/>
 </MainLayout>

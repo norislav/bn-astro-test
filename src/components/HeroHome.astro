@@ -1,13 +1,15 @@
 ---
 import { Icon } from 'astro-icon/components'
+const HeroData = Astro.props.HeroData;
+const GeneralData = Astro.props.GeneralData;
 ---
 
 <!-- Hero Section HTML with Tailwind CSS -->
 <section class="bg-gradient-to-b from-primary-200 to-primary-600 text-base-100 py-16">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
       
       <!-- Left Content -->
-      <div class="md:w-1/2 mb-8 md:mb-0">
+      <div class="md:w-7/12 mb-8 md:mb-0">
         <!-- Location -->
         <p class="text-accent-500 text-xl mb-4 flex items-center gap-1">
             <Icon name="location" class="h-6 w-6 text-primary" />
@@ -15,27 +17,24 @@ import { Icon } from 'astro-icon/components'
         </p>
   
         <!-- Heading -->
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">Alcohol and Drug Rehab in Boca Raton, Florida</h1>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">{HeroData.heading} in Boca Raton, Florida</h1>
   
         <!-- Subheading and Features List -->
-        <p class="text-lg mb-8">Get help for yourself or a loved one today!</p>
+        <p class="text-lg mb-8">{HeroData.text}</p>
         <ul class="list-disc list-inside mb-8 space-y-1 text-lg font-medium">
-          <li>Modern, Boutique Amenities</li>
-          <li>Convenient After Work Availability</li>
-          <li>Private And Discreet Help</li>
-          <li>Cellphones Allowed</li>
-          <li>Same Day Admissions Available</li>
-          <li>Dual Diagnosis Trained Staff</li>
+          {Object.values(HeroData.features).map((feature) => (
+            <li>{feature}</li>
+          ))}
         </ul>
   
         <!-- Call to Action Button -->
         <a href="" class="bg-yellow-300 text-blue-900 px-6 py-3 rounded-md font-bold shadow-lg">
-          Call Us Now!
+          Call Us Now! {GeneralData.phoneNumber}
         </a>
       </div>
   
       <!-- Right Content: Form -->
-      <div class="md:w-1/2 bg-blue-200 p-8 rounded-lg shadow-lg">
+      <div class="md:w-5/12 bg-blue-200 p-8 rounded-lg shadow-lg">
         <h2 class="text-xl font-bold mb-4 text-primary-500">Check Coverage</h2>
         <form action="#" method="POST" class="space-y-4">
           

@@ -1,0 +1,42 @@
+h1 {
+  font-size: clamp(
+    2rem,
+    5vw + 1rem,
+    4rem
+  ); /* Min: 2rem, scaling with viewport, Max: 4rem */
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw + 0.8rem, 3rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: clamp(
+    1.5rem,
+    3.5vw + 0.7rem,
+    2.5rem
+  ); /* Min: 1.5rem, scaling with viewport, Max: 2.5rem */
+  font-weight: 500;
+}
+
+h4 {
+  font-size: clamp(
+    1.25rem,
+    3vw + 0.6rem,
+    2rem
+  ); /* Min: 1.25rem, scaling with viewport, Max: 2rem */
+  font-weight: 500;
+}
+
+p {
+  font-size: clamp(
+    1rem,
+    2.5vw + 0.4rem,
+    1.15rem
+  ); /* Min: 1rem, scaling with viewport, Max: 1.25rem */
+  line-height: 1.5;
+}

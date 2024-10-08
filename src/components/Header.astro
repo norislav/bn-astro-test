@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
+import Data from '../content/general/general.json';
 ---
 
 <header>
@@ -8,7 +9,7 @@ import { Icon } from 'astro-icon/components'
     <div class="container mx-auto flex justify-end items-center space-x-4 text-sm text-gray-700">
       <a href="/contact" class="hover:text-primary-400 font-medium">Contact Us</a>
       <a href="/resources" class="hover:text-primary-400 font-medium">Resources</a>
-      <a href="tel:603-202-3423" class="hover:text-primary-400 font-medium">Call Us Now!</a>
+      <a href="tel:603-202-3423" class="hover:text-primary-400 font-medium">{Data.phoneNumber}</a>
       <a href="/verify-insurance" class="bg-accent-500 text-base-900 px-3 py-1 rounded-md hover:bg-accent-400 font-medium">
         Verify Insurance
       </a>

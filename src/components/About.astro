@@ -1,0 +1,53 @@
+---
+const { headingOne, textOne, headingTwo, textTwo, images } = Astro.props.AboutData;
+---
+
+<section class="bg-gray-50 py-16">
+  <div class="container mx-auto px-4">
+    <!-- Two columns layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <!-- Left Column: Text Content and Image One -->
+      <div>
+        <div class="pr-16">
+            <!-- Heading and Text -->
+            <h2 class="mb-4">{headingOne}</h1>
+            <p class="mb-6">{textOne}</p>
+        </div>
+        <!-- Image One -->
+        <div class="flex justify-center mt-16">
+          {images?.imageOne ? (
+            <img src={images.imageOne} alt="About Image One" class="w-full h-full object-cover rounded-lg shadow-lg" />
+          ) : (
+            <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+              <span class="text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2a1 1 0 110 2 1 1 0 010-2zM4 15l3.528-4.326a1 1 0 011.45-.05l3.316 3.316a1 1 0 001.348.029L16 11" />
+                </svg>
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <!-- Right Column: Conditional Second Text and Image Two -->
+      <div>
+        <!-- Image Two -->
+        {images?.imageTwo ? (
+            <div class="flex justify-center mb-16">
+                <img src={images.imageTwo} alt="About Image Two" class="w-full h-full object-cover rounded-lg shadow-lg" />
+            </div>
+            ) : null}
+        <!-- Second Heading and Text -->
+        {headingTwo && textTwo ? (
+          <>
+          <div class="pr-16">
+            <h2 class="mb-4">{headingTwo}</h2>
+            <p class="">{textTwo}</p>
+          </div>
+          </>
+        ) : null}
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "heading": "Alcohol and Drug Rehab in",
+    "text": "Get help for yourself or a loved one today!",
+    "features": [
+      "Modern, Boutique Amenities",
+      "Convenient After Work Availability",
+      "Private And Discreet Help",
+      "Cellphones Allowed",
+      "Same Day Admissions Available",
+      "Dual Diagnosis Trained Staff"
+    ]
+  },
+  "about": {
+    "headingOne": "Drug And Alcohol Rehab Center In New Hampshire",
+    "textOne": "Welcome to Brand North, where we are dedicated to helping individuals on their journey to recovery. Our mission is to provide compassionate, comprehensive care for those struggling with substance use disorders. Located in Nashua, New Hampshire, our facility offers a supportive and welcoming environment where you can discover your true potential and achieve lasting sobriety.",
+    "headingTwo": "Our Approach to Substance Use Disorder",
+    "textTwo": "At Brand North, we employ a comprehensive treatment approach that emphasizes a family-style environment. We focus on educating and involving the client's family in the recovery process, providing personalized treatment plans tailored to the individual needs of each client. Our value-based care model ensures that you receive the highest quality of care, with a focus on your unique journey to healing and recovery.",
+    "images": {
+      "imageOne": "/bn-astro-test/imgs/about-img-1.jpg",
+      "imageTwo": "/bn-astro-test/imgs/about-img-2.jpg"
+    }
+  }
+}
