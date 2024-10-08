@@ -1,0 +1,75 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<!-- Hero Section HTML with Tailwind CSS -->
+<section class="bg-gradient-to-b from-primary-200 to-primary-600 text-base-100 py-16">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      
+      <!-- Left Content -->
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <!-- Location -->
+        <p class="text-accent-500 text-xl mb-4 flex items-center gap-1">
+            <Icon name="location" class="h-6 w-6 text-primary" />
+          Boca Raton, FL
+        </p>
+  
+        <!-- Heading -->
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Alcohol and Drug Rehab in Boca Raton, Florida</h1>
+  
+        <!-- Subheading and Features List -->
+        <p class="text-lg mb-8">Get help for yourself or a loved one today!</p>
+        <ul class="list-disc list-inside mb-8 space-y-0 text-lg font-medium">
+          <li>Modern, Boutique Amenities</li>
+          <li>Convenient After Work Availability</li>
+          <li>Private And Discreet Help</li>
+          <li>Cellphones Allowed</li>
+          <li>Same Day Admissions Available</li>
+          <li>Dual Diagnosis Trained Staff</li>
+        </ul>
+  
+        <!-- Call to Action Button -->
+        <a href="" class="bg-yellow-300 text-blue-900 px-6 py-3 rounded-md font-bold shadow-lg">
+          Call Us Now!
+        </a>
+      </div>
+  
+      <!-- Right Content: Form -->
+      <div class="md:w-1/2 bg-blue-200 p-8 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-4 text-primary-500">Check Coverage</h2>
+        <form action="#" method="POST" class="space-y-4">
+          
+          <!-- Name Field -->
+          <div>
+            <label for="name" class="block mb-1 text-blue-900">Your Name *</label>
+            <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-md" required>
+          </div>
+          
+          <!-- Email Field -->
+          <div>
+            <label for="email" class="block mb-1 text-blue-900">Your Email *</label>
+            <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-md" required>
+          </div>
+          
+          <!-- Phone Field -->
+          <div>
+            <label for="phone" class="block mb-1 text-blue-900">Your Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="w-full p-2 border border-gray-300 rounded-md">
+          </div>
+          
+          <!-- Message Field -->
+          <div>
+            <label for="message" class="block mb-1 text-blue-900">Your Message</label>
+            <textarea id="message" name="message" class="w-full p-2 border border-gray-300 rounded-md"></textarea>
+          </div>
+  
+          <!-- Submit Button -->
+          <button type="submit" class="bg-yellow-300 text-blue-900 px-6 py-3 rounded-md font-bold shadow-lg w-full">
+            Submit
+          </button>
+        </form>
+        <p class="text-xs text-gray-600 mt-4">Your information is secure & confidential</p>
+      </div>
+    </div>
+  </section>
+  
