@@ -2,6 +2,8 @@
 
 This project is a **static website** built using [Astro](https://astro.build/), a fast, content-focused static site generator. It features a responsive and fluid design powered by **Tailwind CSS**, and includes dynamic data handling using **JSON** files for content management.
 
+The URL of the site is: https://norislav.github.io/bn-astro-test/
+
 ## Table of Contents
 
 1.  [Overview](#overview)
