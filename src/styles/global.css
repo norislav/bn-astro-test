@@ -2,7 +2,7 @@ h1 {
   font-size: clamp(
     2rem,
     5vw + 1rem,
-    4rem
+    3.6rem
   ); /* Min: 2rem, scaling with viewport, Max: 4rem */
   font-weight: 700;
   line-height: 1.2;

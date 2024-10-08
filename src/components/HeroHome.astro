@@ -9,7 +9,7 @@ const GeneralData = Astro.props.GeneralData;
     <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
       
       <!-- Left Content -->
-      <div class="md:w-7/12 mb-8 md:mb-0 pr-8">
+      <div class="md:w-7/12 mb-8 md:mb-0">
         <!-- Location -->
         <p class="text-accent-500 text-xl mb-4 flex items-center gap-1">
             <Icon name="location" class="h-6 w-6 text-primary" />
@@ -17,10 +17,10 @@ const GeneralData = Astro.props.GeneralData;
         </p>
   
         <!-- Heading -->
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">{HeroData.heading} {GeneralData.city}, {GeneralData.state}</h1>
+        <h1 class="mb-4 max-w-2xl ">{HeroData.heading} {GeneralData.city}, {GeneralData.state}</h1>
   
         <!-- Subheading and Features List -->
-        <p class="text-lg mb-8">{HeroData.text}</p>
+        <p class="mb-8 text-2xl">{HeroData.text}</p>
         <ul class="list-disc list-inside mb-8 space-y-1 text-lg font-medium">
           {Object.values(HeroData.features).map((feature) => (
             <li>{feature}</li>
