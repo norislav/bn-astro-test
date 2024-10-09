@@ -1,0 +1,77 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="services-section py-16 bg-gray-100">
+  <div class="container flex flex-col items-center mx-auto px-4 text-center">
+    <h2 class="services-section__heading mb-4">Services</h2>
+    <p class="services-section__description text-lg mb-12">
+      Brand North offers a variety of additional services to support your recovery journey:
+    </p>
+
+    <div class="services-section__grid flex flex-row justify-center flex-wrap gap-8">
+      
+      <!-- Service 1 -->
+      <div class="service-card bg-gray-200 space-y-6 p-8 rounded-lg shadow-lg">
+        <div class="service-card__icon mb-4">
+          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+        </div>
+        <h3 class="service-card__title text-3xl font-semibold mb-2">Medication-Assisted Treatment (MAT)</h3>
+        <p class="service-card__description text-gray-700">
+          Plans to implement mental health outpatient care and psychiatric services, including medications such as Suboxone, Methadone, Vivitrol, and Subutex.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card bg-gray-200 space-y-6 p-8 rounded-lg shadow-lg">
+        <div class="service-card__icon mb-4">
+          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+        </div>
+        <h3 class="service-card__title text-3xl font-semibold mb-2">Sober Living Placement</h3>
+        <p class="service-card__description text-gray-700">
+          Strong partnership with Sober Living ensures access to supportive, substance-free housing environments.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card bg-gray-200 space-y-6 p-8 rounded-lg shadow-lg">
+        <div class="service-card__icon mb-4">
+          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+        </div>
+        <h3 class="service-card__title text-3xl font-semibold mb-2">Transportation Coordination</h3>
+        <p class="service-card__description text-gray-700">
+          Assistance in arranging transportation services to ensure clients can attend their sessions.
+        </p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card bg-gray-200 space-y-6 p-8 rounded-lg shadow-lg">
+        <div class="service-card__icon mb-4">
+          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+        </div>
+        <h3 class="service-card__title text-3xl font-semibold mb-2">Nutritional Counseling</h3>
+        <p class="service-card__description text-gray-700">
+          A nutritionist provides guidance on healthy eating habits and diet plans, with snacks and lunch available for full day treatment clients.
+        </p>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card bg-gray-200 space-y-6 p-8 rounded-lg shadow-lg">
+        <div class="service-card__icon mb-4">
+          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+        </div>
+        <h3 class="service-card__title text-3xl font-semibold mb-2">Case Management</h3>
+        <p class="service-card__description text-gray-700">
+          Assistance with resume building, job search, court paperwork, and accessing community resources to help clients develop life skills and achieve long-term stability.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+    .service-card{
+        width: calc(33.33% - 2rem*2);
+    }
+</style>
