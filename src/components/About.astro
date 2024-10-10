@@ -36,7 +36,7 @@ const { headingOne, textOne, headingTwo, textTwo, images } = Astro.props.AboutDa
         <!-- Image Two -->
         {images?.imageTwo ? (
             <div class="flex justify-center mb-16">
-                <Image src={images.imageTwo} alt="About Image Two" class="object-cover rounded-lg shadow-lg" />
+                <img src={images.imageTwo} alt="About Image Two" class="object-cover rounded-lg shadow-lg" />
             </div>
             ) : null}
         <!-- Second Heading and Text -->
