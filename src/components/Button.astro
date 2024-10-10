@@ -1,0 +1,32 @@
+---
+const { buttonLink, buttonText, buttonClass } = Astro.props;
+---
+
+<a href={buttonLink} class={buttonClass}>{buttonText}</a>
+
+<style>
+
+    /* Primary button */
+    .primary-button {
+        @apply bg-black text-white;
+    }
+    .primary-button:hover {
+        background-color: rgb(0 0 0 / 71%);
+    }
+
+    /* White button */
+
+    .white-button {
+        @apply text-black bg-white;
+    }
+    .white-button:hover{
+        background-color: #ffffffbd;
+    }
+
+
+    .primary-button,
+    .white-button {
+        @apply py-4 px-8  transition-all duration-300 leading-none;
+    }
+   
+</style>
