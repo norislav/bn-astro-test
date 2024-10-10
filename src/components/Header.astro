@@ -24,45 +24,22 @@ import Data from '../content/general/general.json';
       
       <!-- Logo Section -->
       <div class="flex items-center space-x-2">
-        <img src="/bn-astro-test/branding/brand-north-logo-dark.svg" alt="Company Logo" class="h-10" />
+        <a href="/bn-astro-test/">
+          <img src="/bn-astro-test/branding/brand-north-logo-dark.svg" alt="Company Logo" class="h-10" />
+        </a>
       </div>
       
       <nav class="flex space-x-6 items-center">
-        <!-- Dropdown 1: What We Treat -->
+
+        <!-- Dropdown: How We Treat -->
         <div class="relative group">
-          <!-- Dropdown button with icon -->
-          <button class="flex items-center text-gray-700 hover:text-blue-500 focus:outline-none py-2 font-medium">
-            <span>What We Treat</span>
+          <button class="flex items-center text-gray-700 hover:text-blue-500 focus:outline-none font-medium py-2">
+           <span>How We Treat</span>
             <Icon name="chevron-down" class="ml-1 text-base-900 w-4 h-4" />
           </button>
-      
-          <!-- Dropdown menu -->
-          <div class="absolute left-0 hidden group-hover:block bg-white shadow-lg border border-gray-100 z-10">
+          <div class="absolute left-0 hidden group-hover:block bg-white shadow-lg border border-gray-100 rounded-md">
             <ul class="text-sm text-gray-700">
-              <li>
-                <a href="/substance-abuse" class="block px-4 py-2 hover:bg-blue-100">
-                  Substance Abuse
-                </a>
-              </li>
-              <li>
-                <a href="/mental-health" class="block px-4 py-2 hover:bg-blue-100">
-                  Mental Health
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-
-        <!-- Dropdown 2: How We Treat -->
-        <div class="relative group">
-          <button class="text-gray-700 hover:text-blue-500 focus:outline-none font-medium">
-            How We Treat
-          </button>
-          <div class="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg border border-gray-100">
-            <ul class="text-sm text-gray-700">
-              <li><a href="/inpatient" class="block px-4 py-2 hover:bg-blue-100">Inpatient</a></li>
-              <li><a href="/outpatient" class="block px-4 py-2 hover:bg-blue-100">Outpatient</a></li>
+              <li><a href="/bn-astro-test/program" class="dropdown__link flex px-4 py-2 hover:bg-blue-100">Residential Detox</a></li>
             </ul>
           </div>
         </div>
@@ -80,7 +57,11 @@ import Data from '../content/general/general.json';
 <style>
 
 .top-header__link.header-btn{
-  @apply bg-accent-500 px-3 text-base-50 py-1 rounded-md hover:bg-accent-400 font-medium ;
+  @apply bg-accent-500 px-3 text-black py-1 rounded-md hover:bg-accent-400 font-medium ;
+}
+
+.dropdown__link{
+  @apply text-nowrap py-3 px-4 font-medium;
 }
 
   </style>
