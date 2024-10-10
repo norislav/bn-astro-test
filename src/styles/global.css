@@ -1,3 +1,7 @@
+body{
+  font-family: "Poppins", sans-serif;
+}
+
 h1 {
   font-size: clamp(
     2rem,
@@ -40,3 +44,7 @@ p {
   ); /* Min: 1rem, scaling with viewport, Max: 1.25rem */
   line-height: 1.5;
 }
+
+/* Primary button */
+
+

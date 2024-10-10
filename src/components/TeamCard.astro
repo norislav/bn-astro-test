@@ -1,0 +1,11 @@
+---
+const {Name, Designation, Image} = Astro.props;
+---
+
+<li>
+    <img src={Image} class="  rounded-xl" alt=""/>
+    <div class="mt-4 flex items-center flex-col justify-center">
+      <h3 class="text-lg text-black font-bold">{Name}</h4>
+      <p class="text-primary font-light">{Designation}</p>
+    </div>
+  </li>

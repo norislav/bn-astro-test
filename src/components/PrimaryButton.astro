@@ -1,0 +1,17 @@
+---
+const { buttonLink, buttonText } = Astro.props;
+---
+
+<a href={buttonLink} class="primary-button">{buttonText}</a>
+
+<style>
+    .primary-button {
+        line-height: 1;
+    }
+    .primary-button {
+        @apply py-4 px-8 bg-black text-base text-white transition-all duration-300;
+    }
+    .primary-button:hover {
+        background-color: rgb(0 0 0 / 71%);
+    }
+</style>
