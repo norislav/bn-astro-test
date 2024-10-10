@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<section class="single-testimonial bg-gradient-to-r from-blue-100 to-blue-200 py-12">
+  <div class="container mx-auto bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8">
+    
+    <!-- Testimonial Content -->
+    <div class="single-testimonial__content p-16 md:w-6/12">
+      <div class="flex items-center mb-4">
+        <!-- Star Icons -->
+        <Icon name="star" class="w-6 h-6 text-yellow-500 mr-1" />
+        <Icon name="star" class="w-6 h-6 text-yellow-500 mr-1" />
+        <Icon name="star" class="w-6 h-6 text-yellow-500 mr-1" />
+        <Icon name="star" class="w-6 h-6 text-yellow-500 mr-1" />
+        <Icon name="star" class="w-6 h-6 text-yellow-500" />
+      </div>
+      <p class="single-testimonial__text text-gray-700 text-xl mb-6">
+        I want to thank the entire staff at Brand North for all their support and compassion. It is an amazing program and I wouldn’t be where I am today if it wasn’t for them. It’s a long journey but I know that Discover will always be there to support me. That’s just who they are!
+      </p>
+      <p class="single-testimonial__author text-gray-900 font-semibold">
+        — Kat - A Recent Graduate
+      </p>
+    </div>
+    <!-- Testimonial Image -->
+    <div class="single-testimonial__image md:w-6/12">
+      <img src="/bn-astro-test/imgs/single-testimonial.jpg" alt="Testimonial Image" class="w-full h-full object-cover rounded-lg shadow-lg" />
+    </div>
+  </div>
+</section>

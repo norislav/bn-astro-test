@@ -5,10 +5,31 @@ import About from "../components/About.astro";
 
 import HomeData from '../content/pages/home.json';
 import GeneralData from '../content/general/general.json';
+import ProgramCards from "../components/ProgramCards.astro";
+import SingleTestimonial from "../components/SingleTestimonial.astro";
+import StickyContent from "../components/StickyContent.astro";
+import CTA from "../components/CTA.astro";
+import IconCards from "../components/IconCards.astro";
+import DisorderGrid from "../components/DisorderGrid.astro";
+import Map from "../components/Map.astro";
+import FAQ from "../components/FAQ.astro";
+import InsuranceOptions from "../components/InsuranceOptions.astro";
+import BlogSection from "../components/BlogSection.astro";
 
 ---
 
-<MainLayout title="Home">
+<MainLayout title="Home" description="Alcohol and Drug Rehab in Boca Raton, Florida">
 	<Hero HeroData={HomeData.hero} GeneralData={GeneralData}/>
 	<About AboutData={HomeData.about}/>
+	<ProgramCards />
+	<SingleTestimonial />
+	<StickyContent />
+	<CTA />
+	<IconCards />
+	<DisorderGrid />
+	<Map />
+	<FAQ />
+	<InsuranceOptions />
+	<CTA />
+	<BlogSection />
 </MainLayout>
