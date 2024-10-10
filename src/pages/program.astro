@@ -1,0 +1,189 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Icon } from "astro-icon/components";
+
+import GeneralData from "../content/general/general.json";
+import AdmissionNextStep from "../components/AdmissionNextStep.astro";
+import Form from "../components/form.astro";
+import Team from "../components/Team.astro";
+import VideoModal from "../components/VideoModal.astro";
+import PrimaryButton from "../components/PrimaryButton.astro";
+---
+
+<MainLayout />
+
+<!-- Hero Section -->
+
+<section class="py-28 bg-base-50">
+    <div class="container program-hero__container">
+        <div class="flex-none space-y-5 px-4 md:px-0 gap-5">
+            <p
+                class="text-primary text-xl mb-4 flex items-center gap-1 pb-4 border-0 border-pimary border-b"
+            >
+                <Icon name="location" class="h-6 w-6 text-primary" />
+                Boca Raton, FL
+            </p>
+            <h1 class="program-hero__heading">
+                Residential Drug Detox and Treatment Center, Indiana
+            </h1>
+            <div class="flex gap-5 mb-4 program-hero__logo-wrapper">
+                <img
+                    src="https://wordpress-881289-4850149.cloudwaysapps.com/wp-content/uploads/logoipsum-321.svg"
+                    alt="logo"
+                />
+                <img
+                    src="https://wordpress-881289-4850149.cloudwaysapps.com/wp-content/uploads/logoipsum-321.svg"
+                    alt="logo"
+                />
+            </div>
+            <div class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
+                <PrimaryButton
+                buttonText="Call us: 555-555-5555"
+                buttonLink="5555555555"
+                />
+            </div>
+        </div>
+        <div class="flex-none mt-14 md:mt-0 bg-white p-10 rounded-xl">
+            <!-- Form  -->
+            <Form />
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+
+<section class="progra-about py-20">
+    <div class="container program-content-width mx-auto px-5">
+        <h2 class="mb-6">What is Residential Rehab?</h2>
+        <p class="mb-6 tex-xl leading-relaxed">
+            Residential rehab is an inpatient treatment program where
+            individuals receive comprehensive care to overcome physical
+            dependence on substances, manage withdrawal, and address mental
+            health problems through a combination of medical intervention and
+            intensive therapy. At "Name of Treatment Center," we provide
+            personalized residential drug rehab services, offering 24/7 support
+            and a structured environment to help you achieve long-term recovery.
+        </p>
+        <img
+            src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
+            alt=""
+            class="rounded-xl mb-16"
+        />
+    </div>
+    <div class="container program-content-width mx-auto px-5">
+        <h2 class="mb-6 tex-xl leading-relaxed">
+            Why is Residential Treatment Important?
+        </h2>
+        <p class="mb-6">
+            Residential rehab is vital for your physical and mental health as it
+            offers an environment where medical and therapeutic interventions
+            can be seamlessly integrated. This type of treatment is particularly
+            important for managing severe withdrawal symptoms and providing
+            round-the-clock support, which significantly reduces the risk of
+            relapse. Additionally, residential rehab addresses dual diagnosis,
+            allowing simultaneous treatment of substance use disorders and
+            co-occurring mental health issues. According to the National
+            Institute on Drug Abuse (NIDA), comprehensive treatment programs
+            that include residential rehab show higher success rates, improved
+            mental health outcomes, and better long-term recovery prospects. By
+            offering a holistic approach, residential treatments provide a
+            foundation for sustainable well-being and long-term recovery.
+        </p>
+        <img
+            src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
+            alt=""
+            class="rounded-xl mb-16"
+        />
+    </div>
+</section>
+
+<!-- Vidoe Section -->
+<section class="video-section py-20 bg-base-50">
+    <div
+        class="container mx-auto grid grid-cols-1 lg:grid-cols-2 program-container gap-20 px-5"
+    >
+        <div class="flex flex-col justify-center">
+            <h2 class="mb-5">Watch our video about</h2>
+            <p>
+                Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et.
+                Sunt qui esse pariatur duis deserunt mollit dolore cillum minim
+                tempor enim. Elit aute irure tempor cupidatat incididunt sint
+                deserunt ut.
+            </p>
+        </div>
+
+        <VideoModal />
+    </div>
+</section>
+
+<!-- Team Section -->
+
+<Team />
+
+<!-- Admission Next Steps -->
+
+<AdmissionNextStep />
+
+<!-- Value Review -->
+
+<section class="value-review bg-[#999]">
+    <div class="container program-container mx-auto py-20 flex lg:flex-row flex-col gap-8 ">
+        <div class="max-w-lg w-full flex flex-col gap-5 items-start">
+            <h2>Why choose Placeholder Company?</h2>
+            <p>
+                At Placeholder Company, our expert multidisciplinary team and
+                high-end treatment facilities, coupled with our partnered luxury
+                sober living experience, are meticulously designed to help
+                patients overcome the challenges of addiction, trauma, and
+                mental health issues.
+            </p>
+            <p>
+                We are proudly accredited with the Gold Seal of Approval from
+                The Joint Commission and CARF, affirming our unwavering
+                commitment to the highest standards of care.
+            </p>
+
+            <PrimaryButton
+                buttonText="Call us: 555-555-5555"
+                buttonLink="5555555555"
+            />
+        </div>
+        <div class="w-full flex flex-col items-end">
+            <img src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png" alt="" class="max-w-xl rounded-xl aspect-square	object-cover max-h-[450px]"/>
+            
+            <!-- <div class="flex flex-col bg-white">
+                <div>
+                    <p>
+                        “Placeholder Company has been very helpful and
+                        supportive in my journey. The staff are wonderful and
+                        very helpful in all aspects.” - Matt W.
+                    </p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<style>
+    .program-hero__heading {
+        @apply text-4xl text-gray-800  md:text-5xl leading-relaxed;
+    }
+
+    .program-hero__heading,
+    .program-hero__logo-wrapper {
+        margin-bottom: 40px !important;
+    }
+
+    .program-hero__container {
+        @apply grid mx-auto md:grid-cols-1 xl:grid-cols-2 gap-10 px-5;
+    }
+    .program-hero__container,
+    .program-container {
+        max-width: 1300px;
+    }
+
+    .program-content-width {
+        width: 100%;
+        max-width: 850px;
+    }
+</style>
