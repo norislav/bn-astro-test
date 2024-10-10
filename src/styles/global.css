@@ -39,5 +39,5 @@ p {
     1.15rem
   ); /* Min: 1rem, scaling with viewport, Max: 1.25rem */
   line-height: 1.5;
-  max-width: 60ch;
+  max-width: 65ch;
 }
