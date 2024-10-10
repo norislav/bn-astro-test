@@ -1,5 +1,8 @@
-body{
+@import "/src/styles/fonts.css";
+
+body {
   font-family: "Poppins", sans-serif;
+  font-display: swap;
 }
 
 h1 {
@@ -45,7 +48,4 @@ p {
   line-height: 1.5;
   max-width: 65ch;
 }
-
-
-
 
