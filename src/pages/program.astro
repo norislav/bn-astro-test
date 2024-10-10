@@ -10,164 +10,431 @@ import VideoModal from "../components/VideoModal.astro";
 import PrimaryButton from "../components/PrimaryButton.astro";
 ---
 
-<MainLayout title="Program" >
-<!-- Hero Section -->
+<MainLayout title="Program">
+    <!-- Hero Section -->
 
-<section class="py-28 bg-base-50">
-    <div class="container program-hero__container">
-        <div class="flex-none space-y-5 px-4 md:px-0 gap-5">
-            <p
-                class="text-primary text-xl mb-4 flex items-center gap-1 pb-4 border-0 border-pimary border-b"
-            >
-                <Icon name="location" class="h-6 w-6 text-primary" />
-                Boca Raton, FL
-            </p>
-            <h1 class="program-hero__heading">
-                Residential Drug Detox and Treatment Center, Indiana
-            </h1>
-            <div class="flex gap-5 mb-4 program-hero__logo-wrapper">
-                <img
-                    src="https://wordpress-881289-4850149.cloudwaysapps.com/wp-content/uploads/logoipsum-321.svg"
-                    alt="logo"
-                />
-                <img
-                    src="https://wordpress-881289-4850149.cloudwaysapps.com/wp-content/uploads/logoipsum-321.svg"
-                    alt="logo"
-                />
+    <section class="py-28 bg-base-50">
+        <div class="container program-hero__container">
+            <div class="flex-none space-y-5 px-4 md:px-0 gap-5">
+                <p
+                    class="text-primary text-xl mb-4 flex items-center gap-1 pb-4 border-0 border-pimary border-b"
+                >
+                    <Icon name="location" class="h-6 w-6 text-primary" />
+                    Boca Raton, FL
+                </p>
+                <h1 class="program-hero__heading !font-normal !leading-tight">
+                    Residential Drug Detox and Treatment Center, Indiana
+                </h1>
+                <div class="flex gap-5 mb-4 program-hero__logo-wrapper">
+                    <img
+                        src="https://wordpress-881289-4850149.cloudwaysapps.com/wp-content/uploads/logoipsum-321.svg"
+                        alt="logo"
+                    />
+                    <img
+                        src="https://wordpress-881289-4850149.cloudwaysapps.com/wp-content/uploads/logoipsum-321.svg"
+                        alt="logo"
+                    />
+                </div>
+                <div
+                    class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0"
+                >
+                    <PrimaryButton
+                        buttonText="Call us: 555-555-5555"
+                        buttonLink="5555555555"
+                    />
+                </div>
             </div>
-            <div class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-                <PrimaryButton
-                buttonText="Call us: 555-555-5555"
-                buttonLink="5555555555"
-                />
+            <div class="flex-none mt-14 md:mt-0 bg-white p-10 rounded-xl">
+                <!-- Form  -->
+                <Form />
             </div>
         </div>
-        <div class="flex-none mt-14 md:mt-0 bg-white p-10 rounded-xl">
-            <!-- Form  -->
-            <Form />
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- About Section -->
+    <!-- About Section -->
 
-<section class="progra-about py-20">
-    <div class="container program-content-width mx-auto px-5">
-        <h2 class="mb-6">What is Residential Rehab?</h2>
-        <p class="mb-6 tex-xl leading-relaxed">
-            Residential rehab is an inpatient treatment program where
-            individuals receive comprehensive care to overcome physical
-            dependence on substances, manage withdrawal, and address mental
-            health problems through a combination of medical intervention and
-            intensive therapy. At "Name of Treatment Center," we provide
-            personalized residential drug rehab services, offering 24/7 support
-            and a structured environment to help you achieve long-term recovery.
-        </p>
-        <img
-            src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
-            alt=""
-            class="rounded-xl mb-16"
-        />
-    </div>
-    <div class="container program-content-width mx-auto px-5">
-        <h2 class="mb-6 tex-xl leading-relaxed">
-            Why is Residential Treatment Important?
-        </h2>
-        <p class="mb-6">
-            Residential rehab is vital for your physical and mental health as it
-            offers an environment where medical and therapeutic interventions
-            can be seamlessly integrated. This type of treatment is particularly
-            important for managing severe withdrawal symptoms and providing
-            round-the-clock support, which significantly reduces the risk of
-            relapse. Additionally, residential rehab addresses dual diagnosis,
-            allowing simultaneous treatment of substance use disorders and
-            co-occurring mental health issues. According to the National
-            Institute on Drug Abuse (NIDA), comprehensive treatment programs
-            that include residential rehab show higher success rates, improved
-            mental health outcomes, and better long-term recovery prospects. By
-            offering a holistic approach, residential treatments provide a
-            foundation for sustainable well-being and long-term recovery.
-        </p>
-        <img
-            src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
-            alt=""
-            class="rounded-xl mb-16"
-        />
-    </div>
-</section>
-
-<!-- Vidoe Section -->
-<section class="video-section py-20 bg-base-50">
-    <div
-        class="container mx-auto grid grid-cols-1 lg:grid-cols-2 program-container gap-20 px-5"
-    >
-        <div class="flex flex-col justify-center">
-            <h2 class="mb-5">Watch our video about</h2>
-            <p>
-                Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et.
-                Sunt qui esse pariatur duis deserunt mollit dolore cillum minim
-                tempor enim. Elit aute irure tempor cupidatat incididunt sint
-                deserunt ut.
+    <section class="progra-about py-20">
+        <div class="container program-content-width mx-auto px-5">
+            <h2 class="mb-6 font-medium">What is Residential Rehab?</h2>
+            <p class="mb-6 tex-xl leading-relaxed">
+                Residential rehab is an inpatient treatment program where
+                individuals receive comprehensive care to overcome physical
+                dependence on substances, manage withdrawal, and address mental
+                health problems through a combination of medical intervention
+                and intensive therapy. At "Name of Treatment Center," we provide
+                personalized residential drug rehab services, offering 24/7
+                support and a structured environment to help you achieve
+                long-term recovery.
             </p>
-        </div>
-
-        <VideoModal />
-    </div>
-</section>
-
-<!-- Team Section -->
-
-<Team />
-
-<!-- Admission Next Steps -->
-
-<AdmissionNextStep />
-
-<!-- Value Review -->
-
-<section class="value-review bg-[#999]">
-    <div class="container program-container mx-auto py-20 flex lg:flex-row flex-col gap-8 ">
-        <div class="max-w-lg w-full flex flex-col gap-5 items-start">
-            <h2>Why choose Placeholder Company?</h2>
-            <p>
-                At Placeholder Company, our expert multidisciplinary team and
-                high-end treatment facilities, coupled with our partnered luxury
-                sober living experience, are meticulously designed to help
-                patients overcome the challenges of addiction, trauma, and
-                mental health issues.
-            </p>
-            <p>
-                We are proudly accredited with the Gold Seal of Approval from
-                The Joint Commission and CARF, affirming our unwavering
-                commitment to the highest standards of care.
-            </p>
-
-            <PrimaryButton
-                buttonText="Call us: 555-555-5555"
-                buttonLink="5555555555"
+            <img
+                src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
+                alt=""
+                class="rounded-xl mb-16"
             />
         </div>
-        <div class="w-full flex flex-col items-end">
-            <img src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png" alt="" class="max-w-xl rounded-xl aspect-square	object-cover max-h-[450px]"/>
-            
-            <!-- <div class="flex flex-col bg-white">
-                <div>
-                    <p>
-                        “Placeholder Company has been very helpful and
-                        supportive in my journey. The staff are wonderful and
-                        very helpful in all aspects.” - Matt W.
-                    </p>
-                </div>
-            </div> -->
+        <div class="container program-content-width mx-auto px-5">
+            <h2 class="mb-6 tex-xl leading-normal font-medium">
+                Why is Residential Treatment Important?
+            </h2>
+            <p class="mb-6">
+                Residential rehab is vital for your physical and mental health
+                as it offers an environment where medical and therapeutic
+                interventions can be seamlessly integrated. This type of
+                treatment is particularly important for managing severe
+                withdrawal symptoms and providing round-the-clock support, which
+                significantly reduces the risk of relapse. Additionally,
+                residential rehab addresses dual diagnosis, allowing
+                simultaneous treatment of substance use disorders and
+                co-occurring mental health issues. According to the National
+                Institute on Drug Abuse (NIDA), comprehensive treatment programs
+                that include residential rehab show higher success rates,
+                improved mental health outcomes, and better long-term recovery
+                prospects. By offering a holistic approach, residential
+                treatments provide a foundation for sustainable well-being and
+                long-term recovery.
+            </p>
+            <img
+                src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
+                alt=""
+                class="rounded-xl mb-16"
+            />
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- Vidoe Section -->
+    <section class="video-section py-20 bg-base-50">
+        <div
+            class="container mx-auto grid grid-cols-1 lg:grid-cols-2 program-container gap-20 px-5"
+        >
+            <div class="flex flex-col justify-center">
+                <h2 class="mb-5 font-medium">Watch our video about</h2>
+                <p>
+                    Aliqua id fugiat nostrud irure ex duis ea quis id quis ad
+                    et. Sunt qui esse pariatur duis deserunt mollit dolore
+                    cillum minim tempor enim. Elit aute irure tempor cupidatat
+                    incididunt sint deserunt ut.
+                </p>
+            </div>
 
+            <VideoModal />
+        </div>
+    </section>
 
+    <!-- Team Section -->
 
+    <Team />
+
+    <!-- Admission Next Steps -->
+
+    <AdmissionNextStep />
+
+    <!-- Value Review -->
+
+    <section class="value-review bg-[#999]">
+        <div
+            class="container program-container mx-auto pt-20 lg:pb-24 pb-36 flex lg:flex-row flex-col gap-8 px-5"
+        >
+            <div class="max-w-lg w-full flex flex-col gap-5 items-start">
+                <h2 class="font-medium">Why choose Placeholder Company?</h2>
+                <p>
+                    At Placeholder Company, our expert multidisciplinary team
+                    and high-end treatment facilities, coupled with our
+                    partnered luxury sober living experience, are meticulously
+                    designed to help patients overcome the challenges of
+                    addiction, trauma, and mental health issues.
+                </p>
+                <p>
+                    We are proudly accredited with the Gold Seal of Approval
+                    from The Joint Commission and CARF, affirming our unwavering
+                    commitment to the highest standards of care.
+                </p>
+
+                <PrimaryButton
+                    buttonText="Call us: 555-555-5555"
+                    buttonLink="5555555555"
+                />
+            </div>
+            <div class="w-full flex flex-col items-end relative">
+                <img
+                    src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
+                    alt=""
+                    class="max-w-xl rounded-xl aspect-square object-cover max-h-[500px] w-full"
+                />
+
+                <div
+                    class="p-5 border border-light w-full max-w-[300px] absolute left-0 top-[2rem]"
+                >
+                    <div class="flex flex-col bg-white p-5">
+                        <div class="pb-8 border-b border-[rgba(0, 0, 0, 0.20]">
+                            <div class="flex mb-2">
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        fill="currentColor"
+                                        d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                                    ></path></svg
+                                >
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        fill="currentColor"
+                                        d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                                    ></path></svg
+                                >
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        fill="currentColor"
+                                        d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                                    ></path></svg
+                                >
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        fill="currentColor"
+                                        d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                                    ></path></svg
+                                >
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        fill="currentColor"
+                                        d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                                    ></path></svg
+                                >
+                            </div>
+                            <p>
+                                “Placeholder Company has been very helpful and
+                                supportive in my journey. The staff are
+                                wonderful and very helpful in all aspects.” -
+                                Matt W.
+                            </p>
+                        </div>
+                        <div class="pt-8">
+                            <div class="flex mb-2">
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        fill="currentColor"
+                                        d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                                    ></path></svg
+                                >
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        fill="currentColor"
+                                        d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                                    ></path></svg
+                                >
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        fill="currentColor"
+                                        d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                                    ></path></svg
+                                >
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        fill="currentColor"
+                                        d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                                    ></path></svg
+                                >
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="32"
+                                    height="32"
+                                    viewBox="0 0 24 24"
+                                    ><path
+                                        fill="currentColor"
+                                        d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"
+                                    ></path></svg
+                                >
+                            </div>
+                            <p>
+                                “Placeholder Company has been very helpful and
+                                supportive in my journey. The staff are
+                                wonderful and very helpful in all aspects.” -
+                                Matt W.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download PDF Section -->
+
+    <section class="download-pdf bg-[#D9D9D9]">
+        <div
+            class="container mx-auto max-w-[900px] w-full px-5 py-24 flex flex-col lg:flex-row gap-5 justify-between"
+        >
+            <div class="flex flex-col items-start">
+                <h2 class="mb-3 font-medium">Download our White Paper</h2>
+                <p class="mb-5">
+                    Empower Your Journey, Embrace Your Potential!
+                </p>
+                <a
+                    href="#"
+                    class="font-semibold text-black text-2xl leading-normal underline"
+                    >Download now!</a
+                >
+            </div>
+            <svg
+                width="120"
+                height="120"
+                viewBox="0 0 120 120"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M20.4509 12.9618H17.0545C15.6588 12.9618 14.5205 14.1002 14.5205 15.4959V19.039H20.4511V12.9618H20.4509ZM14.5202 59.5197V106.218C14.5202 107.613 15.6586 108.752 17.0543 108.752H79.991L73.9763 102.821H27.6724C23.6895 102.821 20.4509 99.5822 20.4509 95.5994V59.5197H14.5202ZM71.9834 98.1337H27.6724C26.2767 98.1337 25.1384 96.9954 25.1384 95.5997V59.5197H61.8066C66.6624 59.5197 70.635 55.5471 70.635 50.6913V27.8674C70.635 23.0116 66.6624 19.039 61.8066 19.039H25.1384V4.87778C25.1384 3.48208 26.2767 2.34372 27.6724 2.34372H80.5212V15.3853C80.5212 19.3682 83.76 22.6068 87.7428 22.6068H100.784V62.227H89.4924C84.7657 62.227 80.9201 66.0726 80.9201 70.7993V92.8204H77.6323C75.3284 92.8204 73.271 94.2002 72.3968 96.3318C72.1568 96.9171 72.0206 97.5255 71.9834 98.1337ZM85.2087 2.56333V15.3853C85.2087 16.781 86.347 17.9193 87.7428 17.9193H100.565C100.442 17.6503 100.268 17.4025 100.042 17.1773L85.951 3.08599C85.7255 2.86052 85.4777 2.68614 85.2087 2.56333ZM46.8218 84.4697C45.5274 84.4697 44.4781 83.4204 44.4781 82.1259C44.4781 80.8315 45.5274 79.7822 46.8218 79.7822H72.6274C73.9219 79.7822 74.9712 80.8315 74.9712 82.1259C74.9712 83.4204 73.9219 84.4697 72.6274 84.4697H46.8218ZM46.8218 73.683C45.5274 73.683 44.4781 72.6337 44.4781 71.3393C44.4781 70.0448 45.5274 68.9955 46.8218 68.9955H72.6274C73.9219 68.9955 74.9712 70.0448 74.9712 71.3393C74.9712 72.6337 73.9219 73.683 72.6274 73.683H46.8218ZM8.60603 23.7265C6.3286 23.7265 4.46509 25.59 4.46509 27.8674V50.6913C4.46509 52.9687 6.3286 54.8322 8.60603 54.8322H61.8066C64.0842 54.8322 65.9475 52.9687 65.9475 50.6913V27.8674C65.9475 25.59 64.084 23.7265 61.8066 23.7265H8.60603ZM17.1748 36.9356V34.2103H20.4038C20.7778 34.2103 21.1151 34.3608 21.3567 34.6033C21.6028 34.8501 21.7556 35.1935 21.7556 35.5729C21.7556 35.9524 21.6028 36.2957 21.3567 36.5425C21.1151 36.7849 20.7778 36.9354 20.4038 36.9354L17.1748 36.9356ZM55.582 29.5228H46.3134C45.019 29.5228 43.9697 30.5721 43.9697 31.8665V46.6922C43.9697 47.9866 45.019 49.0359 46.3134 49.0359C47.6079 49.0359 48.6572 47.9866 48.6572 46.6922V41.6231H52.7728C54.0673 41.6231 55.1166 40.5738 55.1166 39.2793C55.1166 37.9849 54.0673 36.9356 52.7728 36.9356H48.6572V34.2103H55.582C56.8765 34.2103 57.9258 33.161 57.9258 31.8665C57.9258 30.5721 56.8763 29.5228 55.582 29.5228ZM36.4924 29.5228H30.5721C29.2777 29.5228 28.2284 30.5721 28.2284 31.8665V46.6922C28.2284 47.9866 29.2777 49.0359 30.5721 49.0359H36.4924C38.0602 49.0359 39.4838 48.3961 40.5143 47.3657C41.5449 46.3354 42.1845 44.9116 42.1845 43.3439V35.2148C42.1845 33.6471 41.5446 32.2235 40.5143 31.1929C39.4838 30.1624 38.0602 29.5228 36.4924 29.5228ZM37.2 34.5072C37.017 34.3242 36.7662 34.2103 36.4924 34.2103H32.9159V44.3484H36.4924C36.7662 44.3484 37.017 44.2345 37.2 44.0515C37.3833 43.8682 37.497 43.6176 37.497 43.3439V35.2148C37.497 34.9411 37.3831 34.6905 37.2 34.5072ZM20.4038 41.6231C22.0622 41.6231 23.5732 40.9397 24.671 39.8386C25.7644 38.7419 26.4431 37.2318 26.4431 35.5729C26.4431 33.914 25.7644 32.404 24.6708 31.3073C23.573 30.2062 22.0622 29.5228 20.4035 29.5228H14.831C13.5366 29.5228 12.4873 30.5721 12.4873 31.8665V46.6922C12.4873 47.9866 13.5366 49.0359 14.831 49.0359C16.1255 49.0359 17.1748 47.9866 17.1748 46.6922V41.6231H20.4038ZM89.4924 66.9145H102.701C104.841 66.9145 106.586 68.6597 106.586 70.7993V97.5079H114.561C114.964 97.5079 115.307 97.7383 115.46 98.1105C115.613 98.4827 115.53 98.8879 115.243 99.1706L96.7788 117.377C96.4015 117.749 95.7926 117.749 95.415 117.377L76.9505 99.1706C76.6641 98.8879 76.5811 98.4827 76.7339 98.1105C76.8865 97.7383 77.2301 97.5079 77.6325 97.5079H85.6078V70.7993C85.6076 68.6597 87.3528 66.9145 89.4924 66.9145Z"
+                    fill="black"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- What We Treat -->
+    <section class="program_what-we-treat">
+        <div class="container program-content-width mx-auto py-28 px-5">
+            <h2 class="font-medium mb-8">
+                What is the Treatment Process During Residential Rehab at "Name
+                of Treatment Center"?
+            </h2>
+            <p class="mb-8">
+                The process of treatment at “Name of Treatment Center” involves
+                comprehensive steps tailored to address each individual’s needs
+                and help them overcome substance use disorders effectively. The
+                process that we follow for inpatient rehab at “Name of Treatment
+                Center” includes:
+            </p>
+            <ul class="content-ul">
+                <li>
+                    <strong>Initial Assessment: </strong>A thorough evaluation
+                    of the individual’s substance use history, mental health
+                    conditions, and physical health to create a personalized
+                    treatment plan.
+                </li>
+                <li>
+                    <strong>Initial Assessment: </strong>A thorough evaluation
+                    of the individual’s substance use history, mental health
+                    conditions, and physical health to create a personalized
+                    treatment plan.
+                </li>
+                <li>
+                    <strong>Initial Assessment: </strong>A thorough evaluation
+                    of the individual’s substance use history, mental health
+                    conditions, and physical health to create a personalized
+                    treatment plan.
+                </li>
+                <li>
+                    <strong>Initial Assessment: </strong>A thorough evaluation
+                    of the individual’s substance use history, mental health
+                    conditions, and physical health to create a personalized
+                    treatment plan.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Program -->
+
+    <section class="py-20 bg-base-50">
+        <div class="container program-content-width mx-auto px-5">
+            <img
+                src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
+                alt=""
+                class="rounded-xl mb-8"
+            />
+            <h2 class="mb-6 font-medium">
+                Which Substances are Treated During Residential Rehab?
+            </h2>
+            <p class="mb-6 tex-xl leading-relaxed">
+                The substances treated during the residential rehab program at
+                "Name of Treatment Center" include a wide variety of addictive
+                substances that contribute to substance use disorders and
+                co-occurring mental health conditions. The drugs that are
+                treated during the residential rehab program at "Name of
+                Treatment Center" in [State] include:
+            </p>
+            <p class="mb-4 leading-relaxed">
+                <strong>Alcohol:</strong> Treatment for alcohol addiction often includes medical
+                detoxification to manage withdrawal symptoms, followed by a
+                combination of individual and group therapy sessions to address
+                behavioral patterns and mental health conditions associated with
+                alcoholism. According to the National Institute on Alcohol Abuse
+                and Alcoholism (NIAAA), structured therapeutic approaches and
+                medications like naltrexone can significantly aid in recovery.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                <strong>Opioids:</strong> Opioid addiction treatment usually begins with medical
+                detoxification using medications like methadone or buprenorphine
+                to reduce withdrawal symptoms and cravings. This is followed by
+                comprehensive therapies such as cognitive-behavioral therapy
+                (CBT) and contingency management to treat both the addiction and
+                any co-occurring mental health issues. Research by the National
+                Institute on Drug Abuse (NIDA) indicates that
+                medication-assisted treatment (MAT) is effective in improving
+                outcomes for individuals with opioid use disorder.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                <strong>Benzodiazepines:</strong> Benzodiazepine dependence requires a carefully
+                monitored tapering process to safely reduce the dosage and
+                prevent severe withdrawal symptoms. Therapeutic interventions
+                often include behavioral therapies and counseling to address the
+                psychological aspects of addiction. Medical intervention is
+                critical, as outlined in research published in the Journal of
+                Addiction Medicine, due to the potential severity of
+                benzodiazepine withdrawal. At "Name of Treatment Center", our
+                treatment strategies are tailored to each substance. We combine
+                medical interventions to manage physical dependence and
+                withdrawal symptoms with comprehensive therapeutic approaches to
+                tackle the underlying psychological and behavioral issues
+                contributing to addiction.
+            </p>
+        </div>
+    </section>
 </MainLayout>
-
 
 <style>
     .program-hero__heading {
@@ -189,6 +456,18 @@ import PrimaryButton from "../components/PrimaryButton.astro";
 
     .program-content-width {
         width: 100%;
-        max-width: 850px;
+        max-width: 900px;
+    }
+    ul.content-ul {
+        list-style: none;
+        padding-inline-start: 0;
+        margin: 0;
+    }
+    ul.content-ul li {
+        @apply text-xl mb-5 leading-relaxed;
+    }
+    ul.content-ul li:before {
+        content: "\2713"; /* Checkmark icon */
+        @apply w-4 m-0 inline-block font-bold;
     }
 </style>
