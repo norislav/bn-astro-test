@@ -1,4 +1,6 @@
-body{
+@import "/src/styles/fonts.css"; /* Adjust the path if needed */
+
+body {
   font-family: "Poppins", sans-serif;
 }
 
@@ -47,5 +49,3 @@ p {
 }
 
 /* Primary button */
-
-
