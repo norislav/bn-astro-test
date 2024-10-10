@@ -23,9 +23,16 @@ const { buttonLink, buttonText, buttonClass } = Astro.props;
         background-color: #ffffffbd;
     }
 
+    /* Transparent button */
+
+    .transparent-button{
+        border: 1px solid white;
+        @apply rounded-lg text-white;
+    }
 
     .primary-button,
-    .white-button {
+    .white-button,
+    .transparent-button {
         @apply py-4 px-8  transition-all duration-300 leading-none;
     }
    

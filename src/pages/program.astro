@@ -8,6 +8,7 @@ import Form from "../components/Form.astro";
 import Team from "../components/Team.astro";
 import VideoModal from "../components/VideoModal.astro";
 import Button from "../components/Button.astro";
+import FAQ from "../components/FAQ.astro";
 ---
 
 <MainLayout title="Program">
@@ -151,10 +152,10 @@ import Button from "../components/Button.astro";
                 </p>
 
                 <Button
-                        buttonText="Call us: 555-555-5555"
-                        buttonLink="tel:5555555555"
-                        buttonClass="primary-button"
-                    />
+                    buttonText="Call us: 555-555-5555"
+                    buttonLink="tel:5555555555"
+                    buttonClass="primary-button"
+                />
             </div>
             <div class="w-full flex flex-col items-end relative">
                 <img
@@ -321,19 +322,152 @@ import Button from "../components/Button.astro";
                 to addiction.
             </p>
 
-            <div class="program-cta py-8 flex flex-col gap-5 justify-center items-center border-dashed border-2 border-black rounded-2xl">
-                <h3 class="text-center">Would you like to learn more about Residential Rehab?</h3>
+            <div
+                class="program-cta py-8 flex flex-col gap-5 justify-center items-center border-dashed border-2 border-black rounded-2xl"
+            >
+                <h3 class="text-center">
+                    Would you like to learn more about Residential Rehab?
+                </h3>
                 <div class="flex gap-5">
-                    <Button buttonText="call us" 
-                    buttonLink="#"
-                    buttonClass="white-button"/>
-                    <Button buttonText="Email us" 
-                    buttonLink="#"
-                    buttonClass="primary-button"/>
+                    <Button
+                        buttonText="call us"
+                        buttonLink="#"
+                        buttonClass="white-button"
+                    />
+                    <Button
+                        buttonText="Email us"
+                        buttonLink="#"
+                        buttonClass="primary-button"
+                    />
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Program Cards -->
+
+    <section>
+        <div class="container program-content-width mx-auto px-5 py-20">
+            <h2 class="font-medium mb-10">
+                What Therapies are Included in the Residential Drug Treatment
+                Program at The Placeholder Company ?
+            </h2>
+            <p class="mb-5">
+                The therapies that are included in the residential drug
+                treatment program at The Placeholder Company  are designed to
+                address a range of issues, including addiction, mental health
+                conditions such as depression and anxiety, and other psychiatric
+                disorders like PTSD. Therapies that are available in the
+                residential drug treatment program at The Placeholder Company 
+                are given below:
+            </p>
+            <h3 class="mb-5 text-4xl">1. Individual Counseling:</h3>
+            <p class="mb-5">
+                One-on-one sessions focused on personal issues, recovery goals,
+                and coping strategies.
+            </p>
+            <h3 class="mb-5 text-4xl">2. Group Counseling:</h3>
+            <p class="mb-5">
+                Peer-based support groups that provide a sense of community and
+                shared experiences.
+            </p>
+
+            <h3 class="mb-5 text-4xl">3. Drug and Alcohol Seminars:</h3>
+
+            <p class="mb-5">
+                Educational sessions that offer insights into addiction, its
+                effects, and strategies for long-term recovery.
+            </p><h3 class="mb-5 text-4xl">4. Wellness Groups:</h3>
+            <p class="mb-5">
+                Activities and discussions aimed at promoting overall
+                well-being, such as mindfulness, nutrition, and physical
+                exercise.
+            </p>
+            <h3 class="mb-5 text-4xl">5. Family Therapy:</h3>
+            <p class="mb-5">
+                Sessions that involve family members to address relational
+                issues and create a supportive home environment for recovery.
+                These therapies collectively help individuals tackle not just
+                the substance use disorder but also co-occurring mental health
+                conditions like depression, anxiety, and PTSD, ensuring a
+                comprehensive approach to recovery.
+            </p>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+
+    <section class="bg-base-50">
+        <div class="container mx-auto program-content-width py-20 px-5">
+            <h2 class="mb-5">
+                What Amenities Does the Residential Treatment Provide at The
+                Grove Estate?
+            </h2>
+            <p class="mb-5">
+                The amenities that we provide at The Grove Estate are designed
+                to create a comfortable, supportive, and therapeutic environment
+                that fosters recovery. Our high-quality living spaces offer a
+                serene and homely atmosphere where individuals can feel safe and
+                relaxed. We also have dedicated therapeutic spaces for
+                counseling and group sessions, ensuring privacy and comfort
+                during treatment. Our recreational areas are equipped with
+                facilities for physical activities, such as yoga, gym sessions,
+                and outdoor sports, which are integral in promoting physical
+                health and well-being. Additionally, our center includes
+                amenities that support holistic therapies like art and music
+                therapy, further enriching the treatment experience. These
+                services benefit patients with substance abuse disorder by
+                providing an enriching, positive environment that aids in mental
+                and emotional healing. A well-structured and tranquil setting
+                helps reduce stress and anxiety, which are common during detox
+                and recovery. According to a study published in the Journal of
+                Substance Abuse Treatment, patients in residential detox
+                programs with access to stimulating and positive environments
+                exhibit improved mental health outcomes and reduced relapse
+                rates. By integrating comprehensive amenities into our
+                residential treatment program, we ensure that our patients
+                receive well-rounded care that supports all facets of their
+                recovery journey.
+            </p>
+            <img src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png" alt="" class="w-full max-h-[430px] rounded-xl object-cover" >
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <FAQ />
+
+    <!-- Other Treatment Section -->
+
+    <section class="bg-[#6D6D6D]">
+        <div class="container mx-auto px-5 py-20">
+            <div class="flex flex-row justify-between items-center mb-6">
+                <h2 class="text-white font-medium">Other Treatments</h2>
+                <Button 
+                buttonText="View all"
+                buttonLink="#"
+                buttonClass="transparent-button"
+                />
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="program__treatment-card flex flex-col gap-6">
+                    <img src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png" alt="" class="rounded-xl object-cover aspect-square ">
+                    <h3 class="text-3xl text-white font-normal leading-relaxed">Shopping Addiction Treatment In Los Angeles</h3>
+                    <a href="#" class="tex-black font-bold text-base">Read more</a>
+                </div>
+                <div class="program__treatment-card flex flex-col gap-6">
+                    <img src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png" alt="" class="rounded-xl object-cover aspect-square ">
+                    <h3 class="text-3xl text-white font-normal leading-relaxed">Shopping Addiction Treatment In Los Angeles</h3>
+                    <a href="#" class="tex-black font-bold text-base">Read more</a>
+                </div>
+                <div class="program__treatment-card flex flex-col gap-6">
+                    <img src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png" alt="" class="rounded-xl object-cover aspect-square ">
+                    <h3 class="text-3xl text-white font-normal leading-relaxed">Shopping Addiction Treatment In Los Angeles</h3>
+                    <a href="#" class="tex-black font-bold text-base">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </MainLayout>
 
 <style>
