@@ -1,4 +1,6 @@
 ---
+import { Image } from "@unpic/astro";
+
 const { headingOne, textOne, headingTwo, textTwo, images } = Astro.props.AboutData;
 ---
 
@@ -16,7 +18,7 @@ const { headingOne, textOne, headingTwo, textTwo, images } = Astro.props.AboutDa
         <!-- Image One -->
         <div class="flex justify-center mt-16">
           {images?.imageOne ? (
-            <img src={images.imageOne} alt="About Image One" class="w-full h-full object-cover rounded-lg shadow-lg" />
+            <Image src={images.imageOne} alt="About Image One" class="object-cover rounded-lg shadow-lg" />
           ) : (
             <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
               <span class="text-gray-500">
