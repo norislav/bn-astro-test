@@ -4,78 +4,65 @@ This project is a **static website** built using [Astro](https://astro.build/), 
 
 The URL of the site is: https://norislav.github.io/bn-astro-test/
 
-## Table of Contents
 
-1.  [Overview](#overview)
-2.  [Project Structure](#project-structure)
-3.  [Features](#features)
-4.  [Dynamic Content](#dynamic-content)
-5.  [Tailwind CSS](#tailwind-css)
-6.  [Astro Icon](#astro-icon)
-7.  [Flow of the Project](#flow-of-the-project)
-8.  [Customization](#customization)
-9.  [Conclusion](#conclusion)
+## 1. File and Folder Structure
+   
+-   **Suggested Directory Structure**:
+    
+    -   `components/`: Holds reusable components shared across the project.
+    -   `layouts/`: Contains layout files that provide consistent structure around pages.
+    -   `pages/`: Includes page components that map directly to application routes.
+    -   `content/`: Stores content files (e.g., JSON, Markdown) for dynamic content handling.
+    -   `styles/`: Houses global styles and component-specific styles.
+    -   `assets/`: Contains static assets such as images, icons, and fonts.
+-   
+    
+## 2. Component Organization
 
-## Overview
+Organizing components thoughtfully enhances reusability and code clarity. The suggested organization structure is as follows:
 
-The site contains several components, such as a **Hero section**, **About section**, and **Header**, with each component leveraging Tailwind CSS for layout and style. The site is designed to be easily extensible with additional components and sections.
+-   **Group Components by Type**:
+    
+    -   `layouts/`: Includes global layouts that wrap around pages to provide consistent headers, footers, or sidebars.
+    -   `sections/`: Contains larger page sections that could be used to build different parts of a webpage, such as "Hero," "Testimonials," or "Footer" sections.
+    -   `ui/`: Holds smaller, reusable UI components like buttons, form inputs, and cards. These are often styled elements that are used across multiple sections.
+    -   `utilities/`: Houses utility functions, hooks, or custom helpers used to enhance the functionality of components.
+-   **Component Naming Conventions**:
+    
+    -   Use **PascalCase** for component files (e.g., `HeroSection.astro`, `Footer.astro`).
+    -   For components that belong to a specific domain, consider prefixing their names (e.g., `TestimonialCard` inside `sections/Testimonials`).
 
-The website pulls in content dynamically from JSON files for flexibility and easy content updates.
+## 3. Styling Best Practices
 
-## Project Structure
+Consistent styling ensures a uniform look and feel throughout the project:
 
-The project follows a modular approach, with components, layouts, and content data separated for ease of maintenance and scalability. Here’s a breakdown of the directory structure:
+-   **Use Utility-First CSS with Tailwind**: Tailwind CSS helps avoid writing too much custom CSS by using utility classes for common patterns, leading to consistent styling.
+    
+-   **BEM-like Naming Convention for Custom Classes**: If you use custom CSS, follow a BEM-like (Block, Element, Modifier) naming pattern to avoid style conflicts and make the code easy to read.
+    
+-   **Maintain a Theme File for Global Styles**: Use a theme file to define the global color palette, typography, spacing, and other design tokens.
+    
 
-    `src/
-    ├── components/
-    │   ├── About.astro           # About section component
-    │   ├── Header.astro          # Header component
-    │   ├── HeroHome.astro        # Hero section component
-    ├── content/
-    │   ├── general/
-    │   │   └── general.json      # General information about the company (e.g., name, location)
-    │   ├── pages/
-    │   │   └── home.json         # Content for the home page, including hero and about section
-    ├── layouts/
-    │   └── MainLayout.astro      # Main layout for all pages
-    ├── pages/
-    │   └── index.astro           # Home page pulling in all components and data
-    ├── styles/
-    │   └── global.css            # Global styles including fluid typography using clamp()`
+## 4. Code Consistency
 
-## Features
+Maintaining consistent code practices throughout the project is vital for code readability and collaboration:
 
-### Dynamic Content
+### Naming Conventions
 
-The content for various sections (like the hero section, about section, and header) is pulled dynamically from JSON files stored in the `/content` directory. This allows for easy updates to the website’s text, images, and metadata without changing the code itself.
+-   **File and Folder Naming**:
+    
+    -   Use **PascalCase** for component and layout file names (e.g., `Header.astro`, `MainLayout.astro`).
+    -   Use **kebab-case** for folders and utility files (e.g., `utils/helpers.js`, `styles/global.css`).
+-   **Component Naming**:
+    
+    -   Components should follow **PascalCase** (e.g., `HeroSection`, `IconCard`).
+    -   Use descriptive and meaningful names for components. Avoid abbreviations unless they're widely known.
+-   **Variables and Functions**:
+    
+    -   Use **camelCase** for variable and function names (e.g., `handleClick`, `fetchData`).
+    -   Make sure names reflect the purpose of the function or variable clearly.
 
-### Tailwind CSS
+### Avoid Code Duplication
 
-Tailwind CSS is used throughout the project to provide utility-first styling. It allows for rapid UI development and ensures that the site is responsive across different devices. The project also includes **fluid typography** implemented with the `clamp()` function to create responsive, scalable text sizes.
-
-### Astro Icon
-
-Icons throughout the site are managed using **astro-icon**, a convenient icon management tool that integrates with Astro for SVG-based icons.
-
-## Flow of the Project
-
-1.  **Main Layout**: The layout (`MainLayout.astro`) wraps the entire site, providing a consistent header, footer, and structure across all pages.
-2.  **Home Page**: The `index.astro` file imports content data from JSON files and injects it into components like `HeroHome` and `About`.
-3.  **Components**:
-
-    - **HeroHome.astro**: Displays the hero section, pulling in dynamic content such as the company location and features from `home.json`.
-    - **About.astro**: Displays the about section, pulling text and images from `home.json`.
-
-4.  **Data Handling**: All content is stored in the `/content` directory, where `general.json` contains information like the company name, logo, and location. The `home.json` file contains data specific to the homepage (hero and about sections).
-
-## Customization
-
-To customize the content of the website we can:
-
-- **Update Text/Images**: Modify the JSON files in the `/content` directory.
-- **Update Global Styles**: Modify `global.css` for typography or color changes across the site.
-- **Add New Components**: Create new `.astro` components in the `/components` directory, and import them into the relevant pages.
-
-## Conclusion
-
-This project is a **static website** built using [Astro](https://astro.build/), a fast, content-focused static site generator. It features a responsive and fluid design powered by **Tailwind CSS**, and includes dynamic data handling using **JSON** files for content management.
+-   **Reuse Components**: Always look for opportunities to reuse existing components or utility functions. Avoid copying and pasting similar code across the project.
+-   **Refactor Common Patterns into Reusable Utilities**: If you notice repeated code, consider refactoring it into a helper function or a reusable component.
