@@ -21,7 +21,7 @@ const GeneralData = Astro.props.GeneralData;
   
         <!-- Subheading and Features List -->
         <p class="mb-8 text-2xl">{HeroData.text}</p>
-        <ul class="list-disc list-inside mb-8 space-y-1 text-lg font-medium">
+        <ul class="list-disc list-inside mb-8 space-y-1 lg:text-lg md:text-md sm:text-sm font-medium">
           {Object.values(HeroData.features).map((feature) => (
             <li>{feature}</li>
           ))}

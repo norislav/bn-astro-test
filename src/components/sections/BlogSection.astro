@@ -1,0 +1,53 @@
+---
+import BlogCard from '../ui/BlogCard.astro';
+
+const blogPosts = [
+  {
+    title: "Lorem ipsum dolor sit amet",
+    category: "Category 1",
+    readTime: "1 min read",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    imageUrl: "/bn-astro-test/imgs/about-img-1.jpg",
+    link: "#"
+  },
+  {
+    title: "Lorem ipsum dolor sit amet",
+    category: "Category 1",
+    readTime: "1 min read",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    imageUrl: "/bn-astro-test/imgs/about-img-1.jpg",
+    link: "#"
+  },
+  {
+    title: "Lorem ipsum dolor sit amet",
+    category: "Category 1",
+    readTime: "1 min read",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    imageUrl: "/bn-astro-test/imgs/about-img-1.jpg",
+    link: "#"
+  },
+];
+---
+
+<section class="blog-section py-16 bg-gray-100">
+  <div class="container flex flex-col items-center gap-4 mx-auto px-4 text-center">
+    <h2 class="blog-section__heading">Blog</h2>
+    <p class="blog-section__description text-lg mb-12">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+    </p>
+
+    <!-- Blog Post Grid -->
+    <div class="blog-section__grid grid grid-cols-1 md:grid-cols-3 gap-8">
+      {blogPosts.map((post) => (
+        <BlogCard
+          title={post.title}
+          category={post.category}
+          readTime={post.readTime}
+          description={post.description}
+          imageUrl={post.imageUrl}
+          link={post.link}
+        />
+      ))}
+    </div>
+  </div>
+</section>
