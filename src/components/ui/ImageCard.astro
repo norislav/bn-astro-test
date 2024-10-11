@@ -21,13 +21,3 @@ const { title, description, image } = Astro.props as Props;
     </p>
   </div>
 </div>
-
-<style>
-      .image-card{
-    grid-column: span 1; /* Each item spans 1 column by default */
-  }
-  /* Dealing with single orphan */
-  .image-card:last-child:nth-child(2n - 1) {
-    grid-column-end: 4; /* Center the last single orphan item */
-  }
-</style>

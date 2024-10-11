@@ -10,11 +10,11 @@ interface Props {
 const { iconName, title, description } = Astro.props as Props;
 ---
 
-<div class="icon-card bg-gray-200 space-y-6 p-8 rounded-lg shadow-lg">
+<div class="icon-card bg-gray-200 space-y-6 p-4 sm:p-6 md:p-8 rounded-lg shadow-lg">
   <div class="icon-card__icon mb-4">
     <Icon name={iconName} class="w-20 h-20 text-gray-500 mx-auto" />
   </div>
-  <h3 class="icon-card__title text-3xl font-semibold mb-2">{title}</h3>
+  <h3 class="icon-card__title text-2xl font-semibold mb-2">{title}</h3>
   <p class="icon-card__description text-gray-700">
     {description}
   </p>
@@ -23,6 +23,5 @@ const { iconName, title, description } = Astro.props as Props;
 
 <style>
     .icon-card {
-        width: calc(33.33% - 2rem*2);
     }
 </style>
