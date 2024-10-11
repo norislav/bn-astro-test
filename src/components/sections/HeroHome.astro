@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
-const HeroData = Astro.props.HeroData;
+const { heading, text, features } = Astro.props.HeroData;
 const GeneralData = Astro.props.GeneralData;
 ---
 
@@ -17,12 +17,12 @@ const GeneralData = Astro.props.GeneralData;
         </p>
   
         <!-- Heading -->
-        <h1 class="mb-4 max-w-2xl ">{HeroData.heading} {GeneralData.city}, {GeneralData.state}</h1>
+        <h1 class="mb-4 max-w-2xl ">{heading} {GeneralData.city}, {GeneralData.state}</h1>
   
         <!-- Subheading and Features List -->
-        <p class="mb-8 text-2xl">{HeroData.text}</p>
+        <p class="mb-8 text-2xl">{text}</p>
         <ul class="list-disc list-inside mb-8 space-y-1 lg:text-lg md:text-md sm:text-sm font-medium">
-          {Object.values(HeroData.features).map((feature) => (
+          {Object.values(features).map((feature) => (
             <li>{feature}</li>
           ))}
         </ul>

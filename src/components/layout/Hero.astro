@@ -1,0 +1,21 @@
+---
+// Import any additional icons if needed.
+const HeroData = Astro.props.HeroData;
+const GeneralData = Astro.props.GeneralData;
+---
+
+<section class="hero bg-gray-200 py-16 px-4">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <!-- Left Content -->
+      <div class="hero__content mb-8 md:mb-0 md:w-1/2">
+        <h2 class="hero__title text-4xl font-bold mb-4">{HeroData.heading}</h2>
+        <p class="hero__text text-lg mb-6">{HeroData.text}</p>
+        <div class="hero__actions flex items-center gap-4">
+          <a href="/verify-insurance" class="bg-gray-700 text-white py-3 px-6 rounded-md font-medium flex items-center gap-2 hover:bg-gray-800">
+            VERIFY INSURANCE →
+          </a>
+          <span class="hero__phone-number text-lg font-semibold">{GeneralData.phone}</span>
+        </div>
+      </div>
+    </div>
+  </section>

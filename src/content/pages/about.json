@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "heading": "Alcohol and Drug Rehab in",
+    "text": "Get help for yourself or a loved one today!"
+  },
+  "about": {
+    "headingOne": "Our Story",
+    "textOne": "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.",
+    "headingTwo": "Mission Statement",
+    "textTwo": "Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
+    "images": {
+      "imageOne": "/bn-astro-test/imgs/about-img-1.jpg",
+      "imageTwo": "/bn-astro-test/imgs/about-img-2.jpg"
+    }
+  },
+  "coreValues": {
+    "heading": "Core Values",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    "values": [
+      {
+        "number": "01",
+        "title": "Borem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.",
+        "text": "Porem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+      },
+      {
+        "number": "02",
+        "title": "Qorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.",
+        "text": "Forem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+      },
+      {
+        "number": "03",
+        "title": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.",
+        "text": "Sorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+      },
+      {
+        "number": "04",
+        "title": "Horem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.",
+        "text": "Worem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+      },
+      {
+        "number": "05",
+        "title": "Norem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.",
+        "text": "Vorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit."
+      }
+    ]
+  },
+  "facility": {
+    "heading": "Our Facility",
+    "text": "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Ut commodo efficitur neque. "
+  },
+  "approach": {
+    "headingOne": "Our Approach",
+    "textOne": "Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.",
+    "headingTwo": "Why Choose Us?",
+    "textTwo": "Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.",
+    "images": {
+      "imageOne": "/bn-astro-test/imgs/about-img-1.jpg",
+      "imageTwo": "/bn-astro-test/imgs/about-img-2.jpg"
+    }
+  }
+}
