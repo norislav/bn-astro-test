@@ -1,5 +1,6 @@
 ---
 import AboutData from '../content/pages/about.json';
+import HomeData from '../content/pages/home.json';
 import GeneralData from '../content/general/general.json';
 
 import MainLayout from "../layouts/MainLayout.astro"
@@ -7,30 +8,22 @@ import MainLayout from "../layouts/MainLayout.astro"
 import Hero from '../components/layout/Hero.astro';
 import AboutSection from "../components/sections/About.astro";
 import ProgramCards from "../components/sections/ProgramCards.astro";
-import SingleTestimonial from "../components/sections/SingleTestimonial.astro";
 import StickyContent from "../components/sections/StickyContent.astro";
-import IconCards from "../components/sections/IconCards.astro";
-import DisorderGrid from "../components/sections/DisorderGrid.astro";
-import InsuranceOptions from "../components/sections/InsuranceOptions.astro";
-import BlogSection from "../components/sections/BlogSection.astro";
 import FAQ from "../components/sections/FAQ.astro";
 import Map from "../components/Map.astro";
-import CTA from "../components/CTA.astro";
+import Facility from '../components/sections/Facility.astro';
+import Team from '../components/Team.astro';
 
 ---
 
-<MainLayout title="Home" description="Alcohol and Drug Rehab in Boca Raton, Florida">
-	<Hero HeroData={AboutData.hero} GeneralData={GeneralData}/>
-	<AboutSection AboutData={AboutData.about}/>
-	<ProgramCards />
-	<SingleTestimonial />
-	<StickyContent />
-	<CTA />
-	<IconCards />
-	<DisorderGrid />
+<MainLayout title="About" description="Alcohol and Drug Rehab in Boca Raton, Florida">
+	<Hero Content={AboutData.hero} GeneralData={GeneralData}/>
+	<AboutSection Content={AboutData.about}/>
+	<StickyContent Content={AboutData.coreValues}/>
+    <Team />
+    <Facility Content={AboutData.facility}/>
+    <ProgramCards Content={HomeData.programs}/>
+    <AboutSection Content={AboutData.approach}/>
 	<Map />
 	<FAQ />
-	<InsuranceOptions />
-	<CTA />
-	<BlogSection />
 </MainLayout>

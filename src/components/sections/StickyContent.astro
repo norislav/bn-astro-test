@@ -1,5 +1,5 @@
 ---
-const { heading, text, buttonText, therapies } = Astro.props.Therapies;
+const { heading, text, buttonText, list } = Astro.props.Content;
 ---
 
 <section class="sticky-content py-16">
@@ -19,13 +19,13 @@ const { heading, text, buttonText, therapies } = Astro.props.Therapies;
     <!-- Right Column: List of Therapies -->
     <div class="sticky-content__list space-y-12">
       
-      {therapies.map((therapy, index) => (
+      {list.map((item, index) => (
         <div class="therapy-item flex items-start">
           <span class="therapy-item__number mr-4">{index + 1}.</span>
           <div>
-            <h3 class="therapy-item__title mb-4">{therapy.title}</h3>
+            <h3 class="therapy-item__title mb-4">{item.title}</h3>
             <p class="therapy-item__description">
-              {therapy.description}
+              {item.description}
             </p>
           </div>
         </div>

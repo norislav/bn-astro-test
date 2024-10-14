@@ -20,17 +20,17 @@ import CTA from "../components/CTA.astro";
 ---
 
 <MainLayout title="Home" description="Alcohol and Drug Rehab in Boca Raton, Florida">
-	<Hero HeroData={HomeData.hero} GeneralData={GeneralData}/>
-	<About AboutData={HomeData.about}/>
-	<ProgramCards Programs={HomeData.programs}/>
+	<Hero Content={HomeData.hero} GeneralData={GeneralData}/>
+	<About Content={HomeData.about}/>
+	<ProgramCards Content={HomeData.programs}/>
 	<SingleTestimonial />
-	<StickyContent Therapies={HomeData.therapies}/>
-	<CTA Cta={HomeData.cta}/>
-	<IconCards Services={HomeData.services}/>
+	<StickyContent Content={HomeData.therapies}/>
+	<CTA Content={HomeData.cta}/>
+	<IconCards Content={HomeData.services}/>
 	<DisorderGrid />
 	<Map />
 	<FAQ />
 	<InsuranceOptions />
-	<CTA Cta={HomeData.cta}/>
+	<CTA Content={HomeData.cta}/>
 	<BlogSection />
 </MainLayout>

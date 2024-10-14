@@ -25,7 +25,7 @@
     "heading": "Therapies",
     "text": "At Brand North, we offer a range of evidence-based and holistic therapies to support your recovery journey:",
     "buttonText": "Call Us Now!",
-    "therapies": [
+    "list": [
       {
         "title": "Holistic Approaches",
         "description": "Includes therapies like breathwork, yoga, and meditation to support overall well-being."
