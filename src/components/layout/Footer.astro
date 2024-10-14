@@ -1,23 +1,113 @@
 ---
-import { Icon } from 'astro-icon/components';
-import Data from '../../content/general/general.json';
+import { Icon } from "astro-icon/components";
+import Data from "../../content/general/general.json";
 ---
 
-<footer class="footer bg-gray-200 text-white py-8">
-  <div class="container flex flex-col items-center gap-8 mx-auto px-4 text-center">
-    <!-- Logo -->
-    <div class="footer__logo">
-      <img src={Data.logo} alt="Company Logo" class="mx-auto h-12" />
+<footer class="footer bg-[#b7fae633] text-white py-16">
+  <div
+    class="w-full max-w-[1240px] grid gap-11 md:grid-cols-4 grid-cols-1 mx-auto px-5 mb-5 items-center border-b border-[#dddedf]"
+  >
+    <!-- left Menu -->
+    <div class="flex flex-col md:items-start items-center ">
+      <ul class="w-max">
+        <li class="mb-2">
+          <a href="#" class="text-xl text-black font-medium leading-normal"
+            >Home</a
+          >
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-xl text-black font-medium leading-normal"
+            >Home</a
+          >
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-xl text-black font-medium leading-normal"
+            >Home</a
+          >
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-xl text-black font-medium leading-normal"
+            >Home</a
+          >
+        </li>
+      </ul>
     </div>
 
-    <!-- Address -->
-    <div class="footer__address mb-2">
-      <p class="text-primary-500 font-medium">{Data.city}, {Data.state}</p>
+    <div
+      class="flex flex-col items-center gap-11 mx-auto px-4 text-center col-span-2 mb-4 pb-4"
+    >
+      <!-- Logo -->
+      <div class="footer__logo">
+        <img src={Data.logo} alt="Company Logo" class="mx-auto h-12" />
+      </div>
+
+      <!-- Address -->
+      <div class="footer__address mb-2 flex flex-row items-center gap-2">
+        <Icon name="location" class="h-6 w-6 text-primary-500" />
+
+        <p class="text-primary-500 font-medium">{Data.address}</p>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="footer__phone flex flex-row items-center gap-2">
+        <Icon name="phone" class="h-6 w-6 text-primary-500" />
+        <p class="text-primary-500 font-medium">
+          <a href={`tel:${Data.phoneNumber}`}>{Data.phoneNumber}</a>
+        </p>
+      </div>
+
+      <!-- Phone Number 2 -->
+      <div class="footer__phone flex flex-row items-center gap-2">
+        <Icon name="phone" class="h-6 w-6 text-primary-500" />
+        <p class="text-primary-500 font-medium">
+          <a href={`tel:${Data.phoneNumber}`}>{Data.phoneNumber2}</a>
+        </p>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex flex-row gap-5 items-center">
+        <Icon name="facebook" class="text-3xl text text-primary-500" />
+        <Icon name="instagram" class="text-3xl text text-primary-500" />
+        <Icon name="linkedin" class="text-3xl text text-primary-500" />
+      </div>
     </div>
 
-    <!-- Phone Number -->
-    <div class="footer__phone">
-      <p class="text-primary-500 font-medium">Phone: <a href={`tel:${Data.phoneNumber}`}>{Data.phoneNumber}</a></p>
+    <!-- Right Menu  -->
+
+    <div class="flex flex-col md:items-end items-center ">
+      <ul class="w-max">
+        <li class="mb-2">
+          <a href="#" class="text-xl text-black font-medium leading-normal"
+            >Home</a
+          >
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-xl text-black font-medium leading-normal"
+            >Home</a
+          >
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-xl text-black font-medium leading-normal"
+            >Home</a
+          >
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-xl text-black font-medium leading-normal"
+            >Home</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
+
+  <div class="w-full max-w-[800px] mx-auto  gap-3 flex flex-col items-center px-5">
+    <p class="text-center text-black text-base ">Copyright © 2024 BH Framework ACF. All rights reserved.</p>
+    <p class="text-center text-[#043e2db3] text-base ">
+      We improve our products and advertising by using Microsoft Clarity to see
+      how you use our website. By using our site, you agree that we and
+      Microsoft can collect and use this data.
+    </p>
+  </div>
 </footer>
+
+
