@@ -3,5 +3,7 @@
   "logo": "/bn-astro-test/branding/brand-north-logo-dark.svg",
   "city": "Boca Raton",
   "state": "Florida",
-  "phoneNumber": "555-555-5555"
+  "address": "5455 N Federal Hwy Suite L Boca Raton, Florida 33487",
+  "phoneNumber": "555-555-5555",
+  "phoneNumber2": "555-555-5555"
 }
