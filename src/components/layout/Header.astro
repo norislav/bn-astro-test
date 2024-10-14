@@ -1,66 +1,187 @@
 ---
-import { Icon } from 'astro-icon/components'
-import Data from '../../content/general/general.json';
-
+import { Icon } from "astro-icon/components";
+import Data from "../content/general/general.json";
+import Button from "../Button.astro";
+// Define your menu items
+const menuItems = [
+  { name: "About", link: "/about" },
+  { name: "Contact", link: "/contact" },
+];
+// Define your dropdown menus
+const dropdownMenus = [
+  {
+    title: "What We Treat",
+    items: [
+      { name: "Residential Detox", link: "/bn-astro-test/program" },
+      { name: "Outpatient Services", link: "/bn-astro-test/outpatient" },
+      // Add more items as needed
+    ],
+  },
+  {
+    title: "Our Services",
+    items: [
+      {
+        name: "Individual Therapy",
+        link: "/bn-astro-test/individual-therapy",
+      },
+      { name: "Group Therapy", link: "/bn-astro-test/group-therapy" },
+      // Add more items as needed
+    ],
+  },
+  // Add more dropdowns here as needed
+];
 ---
-
-<header>
-  <!-- Top Bar -->
-  <div class="bg-gray-100 py-2">
-    <div class="container mx-auto flex justify-end items-center space-x-4 text-sm text-gray-700">
-      <a href="/contact" class="hover:text-primary-400 font-medium">Contact Us</a>
-      <a href="/resources" class="hover:text-primary-400 font-medium">Resources</a>
-      <a href="tel:603-202-3423" class="hover:text-primary-400 font-medium">{Data.phoneNumber}</a>
-      <a href="/verify-insurance" class="top-header__link header-btn">
-        Verify Insurance
-      </a>
+  <nav class="flex space-x-6 items-center">
+    <button id="burger-menu-button" class="md:hidden">
+      <!-- <Icon name="hamburger" " /> -->
+      <svg class="w-8 h-8 viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </button>
+    <ul class="hidden md:flex flex-row gap-4 items-center" id="desktop-nav">
+      {
+        dropdownMenus.map((dropdown) => (
+          <li key={dropdown.title}>
+            <div class="relative group">
+              <button
+                class="flex items-center text-gray-700 hover:text-blue-500 focus:outline-none font-medium py-2"
+                data-dropdown-toggle
+              >
+                <span>{dropdown.title}</span>
+                <Icon
+                  name="chevron-down"
+                  class="ml-1 text-base-900 w-4 h-4"
+                />
+              </button>
+              <div class="absolute left-0 hidden group-hover:block bg-white shadow-lg border border-gray-100 rounded-md w-max">
+                <ul class="text-sm text-gray-700">
+                  {dropdown.items.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.link}
+                        class="dropdown__link flex px-4 py-2 hover:bg-blue-100"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+      {
+        menuItems.map((item) => (
+          <li key={item.name}>
+            <a
+              href={item.link}
+              class="text-gray-700 hover:text-blue-500 font-medium"
+            >
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <div
+    id="dropdown"
+    class="flex flex-col fixed top-0 right-0 bg-white text-black w-full z-50 h-full translate-x-full transition-all duration-300 ease-in-out md:hidden"
+  >
+    <div class="mb-4 px-6 pt-6 flex items-center justify-between">
+      <a href="/bn-astro-test/">
+        <img
+         src="/bn-astro-test/branding/brand-north-logo-dark.svg"
+         alt="Company Logo"
+         class="h-12"
+        />
+       </a>
+      <button
+        class="rounded-full grid place-content-center ml-auto"
+        id="close-dropdown-button"
+      >
+        <span class="block text-3xl font-extralight">✕</span>
+      </button>
     </div>
-  </div>
-
-  <!-- Main Navigation Bar -->
-  <div class="bg-white py-4 shadow-md">
-    <div class="container mx-auto flex justify-between items-center">
-      
-      <!-- Logo Section -->
-      <div class="flex items-center space-x-2">
-        <a href="/bn-astro-test/">
-          <img src="/bn-astro-test/branding/brand-north-logo-dark.svg" alt="Company Logo" class="h-12" />
-        </a>
-      </div>
-      
-      <nav class="flex space-x-6 items-center">
-
-        <!-- Dropdown: How We Treat -->
-        <div class="relative group">
-          <button class="flex items-center text-gray-700 hover:text-blue-500 focus:outline-none font-medium py-2">
-           <span>How We Treat</span>
-            <Icon name="chevron-down" class="ml-1 text-base-900 w-4 h-4" />
-          </button>
-          <div class="absolute left-0 hidden group-hover:block bg-white shadow-lg border border-gray-100 rounded-md">
-            <ul class="text-sm text-gray-700">
-              <li><a href="/bn-astro-test/program" class="dropdown__link flex px-4 py-2 hover:bg-blue-100">Residential Detox</a></li>
+    <div class="h-[1px] w-full bg-[#F1E4E4] mb-4"></div>
+    <div class="px-6 flex flex-col gap-4">
+      {
+        dropdownMenus.map((dropdown) => (
+          <div key={dropdown.title}>
+            <button
+              class="text-2xl font-semibold w-full text-left dropdown-toggle flex items-center"
+              data-dropdown-title
+            >
+              {dropdown.title}
+              <Icon
+                name="chevron-down"
+                class="ml-1 text-base-900 w-8 h-8"
+              />
+            </button>
+            <ul class="hidden text-sm text-gray-700 dropdown-menu pl-2 mt-4">
+              {dropdown.items.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.link}
+                    class="py-2 block transition-transform duration-500 ease-in-out link font-bold text-lg"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
-        </div>
-
-        <!-- Basic Link: About Us -->
-        <a href="/bn-astro-test/about" class="text-gray-700 hover:text-blue-500 font-medium">About Us</a>
-
-        <!-- Basic Link: Contact -->
-        <a href="/contact" class="text-gray-700 hover:text-blue-500 font-medium">Contact</a>
-      </nav>
+        ))
+      }
+      {
+        menuItems.map((item) => (
+          <a
+            key={item.name}
+            href={item.link}
+            class="text-2xl font-semibold w-full text-left dropdown-toggle flex items-center"
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </div>
+    <div class="mt-auto mx-auto pb-4 grid grid-cols-1 sm:grid-cols-2 w-full gap-3 px-6">
+      <Button buttonText = "Verify Insurance" buttonLink = "/insurance" buttonClass = "outline-button"/>
+      <Button buttonText = "555-555-5555" buttonLink = "tel:555-555-5555" buttonClass = "primary-button"/>
     </div>
   </div>
-</header>
-
-<style>
-
-.top-header__link.header-btn{
-  @apply bg-accent-500 px-3 text-black py-1 rounded-md hover:bg-accent-400 font-medium ;
+<script>
+ const openBurgerMenuButton = document.getElementById("burger-menu-button");
+const dropdown = document.getElementById("dropdown");
+const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+const dropdownMenus = document.querySelectorAll(".dropdown-menu");
+function openBurgerMenu() {
+ dropdown.classList.remove("translate-x-full");
+ dropdown.classList.add("translate-x-0");
 }
-
-.dropdown__link{
-  @apply text-nowrap py-3 px-4 font-medium;
+function closeBurgerMenu() {
+ dropdown.classList.remove("translate-x-0");
+ dropdown.classList.add("translate-x-full");
 }
-
-  </style>
+// Handle burger menu toggle
+openBurgerMenuButton.addEventListener("click", () => {
+ if (dropdown.classList.contains("translate-x-full")) {
+  openBurgerMenu();
+ } else {
+  closeBurgerMenu();
+ }
+});
+// Handle dropdown toggle on mobile
+dropdownToggles.forEach((toggle, index) => {
+ toggle.addEventListener("click", () => {
+  dropdownMenus[index].classList.toggle("hidden");
+ });
+});
+// Close the dropdown menu when the close button is clicked
+document.getElementById("close-dropdown-button").addEventListener("click", () => {
+ closeBurgerMenu();
+});
+</script>
