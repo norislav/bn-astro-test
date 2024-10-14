@@ -1,132 +1,36 @@
 ---
+const { heading, text, buttonText, list } = Astro.props.Content;
 ---
 
 <section class="sticky-content py-16">
-    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-      
-      <!-- Left Column: Introduction and Button -->
-      <div class="sticky-content__intro p-8 md:sticky top-10">
-        <h2 class="mb-8">Therapies</h2>
-        <p class=" text-lg mb-6">
-          At Brand North, we offer a range of evidence-based and holistic therapies to support your recovery journey:
-        </p>
-        <a href="" class="inline-block text-primary-500 bg-accent-500 py-3 px-6 font-bold rounded-md shadow-lg">
-          Call Us Now!
-        </a>
-      </div>
-  
-      <!-- Right Column: List of Therapies -->
-      <div class="sticky-content__list space-y-12">
-        
-      <!-- Therapy 1 -->
-      <div class="therapy-item flex items-start">
-        <span class="therapy-item__number mr-4"></span>
-        <div>
-          <h3 class="therapy-item__title mb-4">Holistic Approaches</h3>
-          <p class="therapy-item__description">
-            Includes therapies like breathwork, yoga, and meditation to support overall well-being.
-          </p>
-        </div>
-      </div>
-
-      <!-- Therapy 2 -->
-      <div class="therapy-item flex items-start">
-        <span class="therapy-item__number mr-4"></span>
-        <div>
-          <h3 class="therapy-item__title mb-4">SMART Recovery</h3>
-          <p class="therapy-item__description">
-            A science-based program that helps individuals manage their recovery from addictive behaviors.
-          </p>
-        </div>
-      </div>
-
-      <!-- Therapy 3 -->
-      <div class="therapy-item flex items-start">
-        <span class="therapy-item__number mr-4"></span>
-        <div>
-          <h3 class="therapy-item__title mb-4">Dharma Recovery</h3>
-          <p class="therapy-item__description">
-            Integrates Buddhist principles with the 12-step recovery model.
-          </p>
-        </div>
-      </div>
-    <!-- Therapy 4 -->
-    <div class="therapy-item flex items-start">
-        <span class="therapy-item__number mr-4"></span>
-        <div>
-            <h3 class="therapy-item__title mb-4">Holistic Approaches</h3>
-            <p class="therapy-item__description">
-            Includes therapies like breathwork, yoga, and meditation to support overall well-being.
-            </p>
-        </div>
-        </div>
-
-        <!-- Therapy 5 -->
-        <div class="therapy-item flex items-start">
-        <span class="therapy-item__number mr-4"></span>
-        <div>
-            <h3 class="therapy-item__title mb-4">SMART Recovery</h3>
-            <p class="therapy-item__description">
-            A science-based program that helps individuals manage their recovery from addictive behaviors.
-            </p>
-        </div>
-        </div>
-
-        <!-- Therapy 6 -->
-        <div class="therapy-item flex items-start">
-        <span class="therapy-item__number mr-4"></span>
-        <div>
-            <h3 class="therapy-item__title mb-4">Dharma Recovery</h3>
-            <p class="therapy-item__description">
-            Integrates Buddhist principles with the 12-step recovery model.
-            </p>
-        </div>
-        </div>
-        <!-- Therapy 7 -->
-        <div class="therapy-item flex items-start">
-            <span class="therapy-item__number mr-4"></span>
-            <div>
-                <h3 class="therapy-item__title mb-4">SMART Recovery</h3>
-                <p class="therapy-item__description">
-                A science-based program that helps individuals manage their recovery from addictive behaviors.
-                </p>
-            </div>
-            </div>
+  <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
     
-        <!-- Therapy 8 -->
-        <div class="therapy-item flex items-start">
-        <span class="therapy-item__number mr-4"></span>
-        <div>
-            <h3 class="therapy-item__title mb-4">Dharma Recovery</h3>
-            <p class="therapy-item__description">
-            Integrates Buddhist principles with the 12-step recovery model.
-            </p>
-        </div>
-        </div>  
-      </div>
+    <!-- Left Column: Introduction and Button -->
+    <div class="sticky-content__intro p-8 md:sticky top-10">
+      <h2 class="mb-8">{heading}</h2>
+      <p class="text-lg mb-6">
+        {text}
+      </p>
+      <a href="" class="inline-block text-primary-500 bg-accent-500 py-3 px-6 font-bold rounded-md shadow-lg">
+        {buttonText}
+      </a>
     </div>
-  </section>
 
-  <style>
-    .sticky-content__list {
-      counter-reset: therapy-counter; 
-    }
-
-    .therapy-item__title{
-      @apply lg:text-4xl md:text-3xl;
-    }
-    .therapy-item__description{
-      @apply text-xl;
-    }
-
-    .therapy-item__number {
-      counter-increment: therapy-counter;
-      font-weight: bold;
-      @apply text-2xl;
-    }
-
-    .therapy-item__number::before {
-      content: counter(therapy-counter, decimal-leading-zero) "."; 
-    }
-  </style>
-  
+    <!-- Right Column: List of Therapies -->
+    <div class="sticky-content__list space-y-12">
+      
+      {list.map((item, index) => (
+        <div class="therapy-item flex items-start">
+          <span class="therapy-item__number mr-4">{index + 1}.</span>
+          <div>
+            <h3 class="therapy-item__title mb-4">{item.title}</h3>
+            <p class="therapy-item__description">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+      
+    </div>
+  </div>
+</section>

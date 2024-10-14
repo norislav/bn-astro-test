@@ -1,0 +1,15 @@
+---
+import TeamData from '../content/pages/team.json';
+import GeneralData from '../content/general/general.json';
+import MainLayout from "../layouts/MainLayout.astro"
+import Hero from '../components/layout/Hero.astro';
+import TeamSection from '../components/Team.astro';
+import CTA from '../components/CTA.astro';
+
+---
+
+<MainLayout title="Team" description="Our team">
+	<Hero Content={TeamData.hero} GeneralData={GeneralData}/>
+    <TeamSection />
+    <CTA Content={TeamData.cta} />
+</MainLayout>
