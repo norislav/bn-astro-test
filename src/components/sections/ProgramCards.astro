@@ -1,32 +1,15 @@
 ---
 import ImageCard from '../ui/ImageCard.astro';
-
-const programs = [
-  {
-    title: "Partial Hospitalization Program (PHP)",
-    description: "A day treatment program providing intensive therapy and support, ideal for individuals who need structured care but do not require 24-hour supervision.",
-    image: "/bn-astro-test/imgs/program-1.webp"
-  },
-  {
-    title: "Intensive Outpatient Program (IOP)",
-    description: "A flexible program that allows clients to receive treatment while maintaining their daily responsibilities, including therapy sessions and group activities.",
-    image: "/bn-astro-test/imgs/program-2.webp"
-  },
-  {
-    title: "Outpatient Program (OP)",
-    description: "Includes individual therapy and one group session per week, suitable for those who require ongoing support with less intensive treatment.",
-    image: "/bn-astro-test/imgs/program-3.webp"
-  },
-];
+const { heading, text, programs } = Astro.props.Content;
 ---
 
 <section class="program-cards bg-gray-50 py-16">
   <div class="container flex flex-col items-center mx-auto px-4">
     <h2 class="program-cards__heading text-center mb-8">
-      Our Approach To Substance Use Disorder
+      {heading}
     </h2>
     <p class="program-cards__subheading text-gray-700 text-center mb-12">
-      Brand North offers a variety of treatment programs designed to meet the specific needs of our clients:
+      {text}
     </p>
     <div class="program-cards__grid">
       {programs.map((program) => (
