@@ -1,9 +1,11 @@
 ---
+import Button from "./Button.astro";
+
 const { heading, text, buttonText } = Astro.props.Content;
 ---
 
-<section class="call-to-action py-16 bg-primary-600">
-  <div class="container mx-auto px-4">
+<section class="call-to-action section bg-primary-600">
+  <div class="container">
     <div class="call-to-action__content bg-primary-500 p-10 rounded-lg text-center">
       <h2 class="call-to-action__heading text-white mb-6">
         {heading}
@@ -11,9 +13,9 @@ const { heading, text, buttonText } = Astro.props.Content;
       <p class="call-to-action__text text-white mx-auto mb-8">
         {text}
       </p>
-      <a href="#" class="call-to-action__button bg-accent-500 text-black py-3 px-8 rounded-md font-bold">
-        {buttonText}
-      </a>
+      
+      <Button buttonText= `${buttonText}` buttonLink="#" buttonClass="secondary-button"/>
+     
     </div>
   </div>
 </section>

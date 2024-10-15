@@ -1,51 +1,57 @@
 @import "/src/styles/fonts.css";
 
+
+:root {
+  --h1: clamp(28px, calc(1.75rem + ((1vw - 3.2px) * 2.8125)), 55px);
+  --h2: clamp(24px, calc(1.5rem + ((1vw - 3.2px) * 1.9792)), 43px);
+  --h3: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.5625)), 35px);
+  --h4: clamp(17px, calc(1.0625rem + ((1vw - 3.2px) * 1.1458)), 28px)
+}
+
+
 body {
   font-family: "Poppins", sans-serif;
   font-display: swap;
 }
 
-h1 {
-  font-size: clamp(
-    2rem,
-    5vw + 1rem,
-    3.6rem
-  ); /* Min: 2rem, scaling with viewport, Max: 4rem */
-  font-weight: 700;
-  line-height: 1.2;
+/* Font Size  */
+
+h1,
+.h1 {
+ font-size: var(--h1);
 }
 
-h2 {
-  font-size: clamp(1.75rem, 4vw + 0.8rem, 3rem);
-  font-weight: 600;
-  line-height: 1.3;
+h2,
+.h2{
+  font-size: var(--h2);
 }
 
-h3 {
-  font-size: clamp(
-    1.5rem,
-    3.5vw + 0.7rem,
-    2.5rem
-  ); /* Min: 1.5rem, scaling with viewport, Max: 2.5rem */
-  font-weight: 500;
+h3,
+.h3{
+  font-size: var(--h3);
 }
 
-h4 {
-  font-size: clamp(
-    1.25rem,
-    3vw + 0.6rem,
-    2rem
-  ); /* Min: 1.25rem, scaling with viewport, Max: 2rem */
-  font-weight: 500;
+h4,
+.h4{
+ font-size: var(--h4);
 }
 
 p {
-  font-size: clamp(
-    1rem,
-    2.5vw + 0.4rem,
-    1.15rem
-  ); /* Min: 1rem, scaling with viewport, Max: 1.25rem */
-  line-height: 1.5;
-  max-width: 65ch;
+  font-size:  clamp(18px, calc(1.125rem + ((1vw - 3.2px) * 0.2083)), 20px);
+}
+
+
+/* Common Global Classes */
+
+.section{
+  padding-block: clamp(48px, calc(3rem + ((1vw - 3.2px) * 4.375)), 90px);
+}
+
+.container{
+  width: 100%;
+  max-width: 1280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
 }
 
