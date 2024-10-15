@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import RelatedPosts from '../RelatedPosts.astro';
 
+import { formatDate } from "../../utils/dateUtils";
 
 const { title, description, date, author, readingTime } = Astro.props;
 ---
@@ -15,7 +16,7 @@ const { title, description, date, author, readingTime } = Astro.props;
                 <h1 class="">{title}</h1>
                 <p>Reading time: {readingTime}</p>
                 <small class="text-gray-500">
-                Published on {date} by {author}
+                Published on {formatDate(date)} by {author}
                 </small>
             </header>
             

@@ -2,6 +2,7 @@
 slug: "tobacco-addiction"
 title: "Tobacco Addiction: Symptoms, Causes, Effects, Treatment and Prevention"
 description: "A comprehensive guide to understanding tobacco addiction, including its symptoms, causes, effects, treatment options, and prevention strategies."
+featuredImg: "/bn-astro-test/imgs/tobacco-addiction.webp"
 date: 2024-01-15
 author: "Author Name"
 tags: ["tobacco", "addiction", "nicotine", "health", "treatment"]

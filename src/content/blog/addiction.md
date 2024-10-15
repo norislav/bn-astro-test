@@ -2,6 +2,7 @@
 slug: "addiction"
 title: "Addiction: Definition, Types, How It Works, Effectiveness"
 description: "An in-depth exploration of addiction intervention for alcohol and drug abuse, covering the process, types, and effectiveness."
+featuredImg: "/bn-astro-test/imgs/addiction.webp"
 date: 2024-01-01
 author: "Author Name"
 tags: ["addiction", "intervention", "substance use", "treatment"]

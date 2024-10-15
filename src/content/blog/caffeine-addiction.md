@@ -2,6 +2,7 @@
 slug: "caffeine-addiction"
 title: "Caffeine Addiction: Symptoms, Causes, Effects, Treatment and Prevention"
 description: "A comprehensive guide to understanding caffeine addiction, its symptoms, causes, effects, and how to treat and prevent it."
+featuredImg: "/bn-astro-test/imgs/caffeine-addiction.webp"
 date: 2024-01-15
 author: "Author Name"
 tags: ["caffeine", "addiction", "health", "treatment", "psychoactive"]
