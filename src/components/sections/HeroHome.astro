@@ -1,12 +1,13 @@
 ---
 import { Icon } from 'astro-icon/components'
+import Button from '../Button.astro';
 const { heading, text, features } = Astro.props.Content;
 const GeneralData = Astro.props.GeneralData;
 ---
 
 <!-- Hero Section HTML with Tailwind CSS -->
-<section class="bg-gradient-to-b from-primary-200 to-primary-600 text-base-100 py-16">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+<section class="bg-gradient-to-b from-primary-200 to-primary-600 text-base-100 section">
+    <div class="container flex flex-col md:flex-row justify-between items-center">
       
       <!-- Left Content -->
       <div class="md:w-7/12 mb-8 md:mb-0">
@@ -28,9 +29,7 @@ const GeneralData = Astro.props.GeneralData;
         </ul>
   
         <!-- Call to Action Button -->
-        <a href="" class="bg-yellow-300 text-blue-900 px-6 py-3 rounded-md font-bold shadow-lg">
-          Call Us Now! {GeneralData.phoneNumber}
-        </a>
+        <Button buttonText= {`Call Us Now! ${GeneralData.phoneNumber}`} buttonLink="#" buttonClass="secondary-button"/>
       </div>
   
       <!-- Right Content: Form -->

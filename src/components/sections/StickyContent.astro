@@ -1,9 +1,11 @@
 ---
+import Button from "../Button.astro";
+
 const { heading, text, buttonText, list } = Astro.props.Content;
 ---
 
-<section class="sticky-content py-16">
-  <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+<section class="section">
+  <div class="container grid grid-cols-1 md:grid-cols-2 gap-16">
     
     <!-- Left Column: Introduction and Button -->
     <div class="sticky-content__intro p-8 md:sticky top-10">
@@ -11,9 +13,7 @@ const { heading, text, buttonText, list } = Astro.props.Content;
       <p class="text-lg mb-6">
         {text}
       </p>
-      <a href="" class="inline-block text-primary-500 bg-accent-500 py-3 px-6 font-bold rounded-md shadow-lg">
-        {buttonText}
-      </a>
+      <Button buttonText=`${buttonText}` buttonLink="#" buttonClass="secondary-button"/>
     </div>
 
     <!-- Right Column: List of Therapies -->
