@@ -1,0 +1,24 @@
+---
+import ProgramAr from '../content/pages/programarchive.json';
+import GeneralData from '../content/general/general.json';
+import Hero from "../components/layout/Hero.astro";
+import AboutSection from "../components/sections/About.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import CTA from '../components/CTA.astro';
+import FAQ from '../components/sections/FAQ.astro';
+import StickyContent from '../components/sections/StickyContent.astro';
+import ProgramCards from '../components/sections/ProgramCards.astro';
+
+
+---
+
+<MainLayout title="Program Archive">
+    <Hero Content={ProgramAr.hero} GeneralData={GeneralData}/>
+    <AboutSection Content={ProgramAr.about} />
+    <ProgramCards Content={ProgramAr.programs} />
+    <CTA Content={ProgramAr.cta} />
+    <StickyContent Content={ProgramAr.coreValues} />
+    <FAQ />
+    <CTA Content={ProgramAr.footerCta} />
+
+</MainLayout> 
