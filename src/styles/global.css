@@ -1,13 +1,11 @@
 @import "/src/styles/fonts.css";
 
-
 :root {
   --h1: clamp(28px, calc(1.75rem + ((1vw - 3.2px) * 2.8125)), 55px);
   --h2: clamp(24px, calc(1.5rem + ((1vw - 3.2px) * 1.9792)), 43px);
   --h3: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.5625)), 35px);
-  --h4: clamp(17px, calc(1.0625rem + ((1vw - 3.2px) * 1.1458)), 28px)
+  --h4: clamp(17px, calc(1.0625rem + ((1vw - 3.2px) * 1.1458)), 28px);
 }
-
 
 body {
   font-family: "Poppins", sans-serif;
@@ -18,36 +16,39 @@ body {
 
 h1,
 .h1 {
- font-size: var(--h1);
+  font-size: var(--h1);
 }
 
 h2,
-.h2{
+.h2 {
   font-size: var(--h2);
+  margin-bottom: 1rem;
 }
 
 h3,
-.h3{
+.h3 {
   font-size: var(--h3);
+  margin-bottom: 1rem;
 }
 
 h4,
-.h4{
- font-size: var(--h4);
+.h4 {
+  font-size: var(--h4);
+  margin-bottom: 1rem;
 }
 
 p {
-  font-size:  clamp(18px, calc(1.125rem + ((1vw - 3.2px) * 0.2083)), 20px);
+  font-size: clamp(18px, calc(1.125rem + ((1vw - 3.2px) * 0.2083)), 20px);
+  margin-bottom: 1.4rem;
 }
-
 
 /* Common Global Classes */
 
-.section{
+.section {
   padding-block: clamp(48px, calc(3rem + ((1vw - 3.2px) * 4.375)), 90px);
 }
 
-.container{
+.container {
   width: 100%;
   max-width: 1280px;
   padding-left: 20px;

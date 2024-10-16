@@ -1,36 +1,22 @@
 ---
+// Import utilities and BlogCard component
+import { getCollection } from 'astro:content';
 import BlogCard from '../ui/BlogCard.astro';
 
-const blogPosts = [
-  {
-    title: "Lorem ipsum dolor sit amet",
-    category: "Category 1",
-    readTime: "1 min read",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-    imageUrl: "/bn-astro-test/imgs/about-img-1.jpg",
-    link: "#"
-  },
-  {
-    title: "Lorem ipsum dolor sit amet",
-    category: "Category 1",
-    readTime: "1 min read",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-    imageUrl: "/bn-astro-test/imgs/about-img-1.jpg",
-    link: "#"
-  },
-  {
-    title: "Lorem ipsum dolor sit amet",
-    category: "Category 1",
-    readTime: "1 min read",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-    imageUrl: "/bn-astro-test/imgs/about-img-1.jpg",
-    link: "#"
-  },
-];
+import { formatDate } from '../../utils/dateUtils';
+
+// Fetch blog posts dynamically from the 'blog' folder
+const blogPosts = await getCollection('blog');
+
+// Use an optional prop to limit the number of blog posts shown (defaults to showing all posts)
+const { count = blogPosts.length } = Astro.props;
+
+// Limit the number of posts based on the prop passed
+const limitedPosts = blogPosts.slice(0, count);
 ---
 
 <section class="blog-section section bg-gray-100">
-  <div class="container flex flex-col items-center gap-4 text-center ">
+  <div class="container flex flex-col items-center gap-4 text-center">
     <h2 class="blog-section__heading">Blog</h2>
     <p class="blog-section__description text-lg mb-12">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
@@ -38,14 +24,14 @@ const blogPosts = [
 
     <!-- Blog Post Grid -->
     <div class="blog-section__grid grid grid-cols-1 md:grid-cols-3 gap-8">
-      {blogPosts.map((post) => (
+      {limitedPosts.map((post) => (
         <BlogCard
-          title={post.title}
-          category={post.category}
-          readTime={post.readTime}
-          description={post.description}
-          imageUrl={post.imageUrl}
-          link={post.link}
+          title={post.data.title}
+          description={post.data.description || ''}
+          date={formatDate(post.data.date)}
+          featuredImg={post.data.featuredImg || '/bn-astro-test/imgs/placeholder.jpg'} 
+          readTime={post.data.readingTime || 'Read'}
+          link={`blog/${post.slug}`}
         />
       ))}
     </div>

@@ -3,21 +3,22 @@
 
 interface Props {
   title: string;
-  category: string;
+  date: string;
   readTime: string;
   description: string;
-  imageUrl: string;
+  featuredImg: string;
   link: string;
 }
 
-const { title, category, readTime, description, imageUrl, link } = Astro.props as Props;
+const { title, readTime, description, featuredImg, link, date } = Astro.props as Props;
+
 ---
 
 <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden">
-  <img src={imageUrl} alt={title} class="object-cover w-full h-48" />
+  <img src={featuredImg} alt={title} class="object-cover w-full h-48" />
   <div class="p-8">
     <div class="flex items-center gap-2 text-sm text-gray-500 mb-2">
-      <span class="category">{category}</span>
+      <span class="category">{date}</span>
       <span>•</span>
       <span>{readTime}</span>
     </div>
