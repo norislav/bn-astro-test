@@ -27,7 +27,9 @@ import Button from "../components/Button.astro";
                 <h1 class="!font-normal !leading-tight">
                     Residential Drug Detox and Treatment Center, Indiana
                 </h1>
-                <div class="flex flex-wrap gap-5 mb-4 program-hero__logo-wrapper">
+                <div
+                    class="flex flex-wrap gap-5 mb-4 program-hero__logo-wrapper"
+                >
                     <img
                         src="https://wordpress-881289-4850149.cloudwaysapps.com/wp-content/uploads/logoipsum-321.svg"
                         alt="logo"
@@ -131,7 +133,46 @@ import Button from "../components/Button.astro";
 
     <AdmissionNextStep />
 
-    <!-- Value Review -->
+    <!-- Single Review  -->
+
+    <section class="py-20">
+        <div class="container section relative !pr-14  ">
+            <img
+                src="../public/imgs/review-bg.jpg"
+                alt=""
+                class="absolute top-0 w-full h-full object-cover rounded-md"
+            />
+            <div
+                class="flex flex-col gap-5 items-start max-w-[27rem] w-full z-10 relative ml-auto pl-5"
+            >
+                <h2 class="h3">Individualized care driven by data</h2>
+                <p>
+                    At Placeholder Company, our expert multidisciplinary team
+                    and high-end treatment facilities, coupled with our
+                    partnered luxury sober living experience, are meticulously
+                    designed to help patients overcome the challenges of
+                    addiction, trauma, and mental health issues.
+                </p>
+                <Button
+                    buttonText="Meet Our Experts"
+                    buttonClass="primary-button"
+                />
+            </div>
+            <div class="lg:absolute relative bottom-[-20px] 2xl:left-[-8rem] z-10 w-full lg:max-w-md lg:max-h-md bg-white pt-16 px-10 pb-10 review-card-shadow
+            xl:left-[-3rem] rounded-md ">
+                <p class="mb-4">
+                    At Placeholder Company, our expert multidisciplinary team
+                    and high-end treatment facilities, coupled with our
+                    partnered luxury sober living experience, are meticulously
+                    designed to help patients overcome the challenges of
+                    addiction, trauma, and mental health issues.
+                </p>
+                <span class="text-2xl font-semibold text-primary-500">- Shannon B.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Review 
 
     <section class="value-review bg-[#999]">
         <div
@@ -204,6 +245,8 @@ import Button from "../components/Button.astro";
             </div>
         </div>
     </section>
+     
+     -->
 
     <!-- Download PDF Section -->
 
@@ -430,7 +473,11 @@ import Button from "../components/Button.astro";
                 receive well-rounded care that supports all facets of their
                 recovery journey.
             </p>
-            <img src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png" alt="" class="w-full max-h-[430px] rounded-xl object-cover" >
+            <img
+                src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
+                alt=""
+                class="w-full max-h-[430px] rounded-xl object-cover"
+            />
         </div>
     </section>
 
@@ -443,32 +490,55 @@ import Button from "../components/Button.astro";
         <div class="container">
             <div class="flex flex-row justify-between items-center mb-6">
                 <h2 class="text-white font-medium">Other Treatments</h2>
-                <Button 
-                buttonText="View all"
-                buttonLink="#"
-                buttonClass="transparent-button"
+                <Button
+                    buttonText="View all"
+                    buttonLink="#"
+                    buttonClass="transparent-button"
                 />
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="program__treatment-card flex flex-col gap-6">
-                    <img src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png" alt="" class="rounded-xl object-cover aspect-square ">
-                    <h3 class="text-3xl text-white font-normal leading-relaxed">Shopping Addiction Treatment In Los Angeles</h3>
-                    <a href="#" class="tex-black font-bold text-base">Read more</a>
+                    <img
+                        src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
+                        alt=""
+                        class="rounded-xl object-cover aspect-square"
+                    />
+                    <h3 class="text-3xl text-white font-normal leading-relaxed">
+                        Shopping Addiction Treatment In Los Angeles
+                    </h3>
+                    <a href="#" class="tex-black font-bold text-base"
+                        >Read more</a
+                    >
                 </div>
                 <div class="program__treatment-card flex flex-col gap-6">
-                    <img src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png" alt="" class="rounded-xl object-cover aspect-square ">
-                    <h3 class="text-3xl text-white font-normal leading-relaxed">Shopping Addiction Treatment In Los Angeles</h3>
-                    <a href="#" class="tex-black font-bold text-base">Read more</a>
+                    <img
+                        src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
+                        alt=""
+                        class="rounded-xl object-cover aspect-square"
+                    />
+                    <h3 class="text-3xl text-white font-normal leading-relaxed">
+                        Shopping Addiction Treatment In Los Angeles
+                    </h3>
+                    <a href="#" class="tex-black font-bold text-base"
+                        >Read more</a
+                    >
                 </div>
                 <div class="program__treatment-card flex flex-col gap-6">
-                    <img src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png" alt="" class="rounded-xl object-cover aspect-square ">
-                    <h3 class="text-3xl text-white font-normal leading-relaxed">Shopping Addiction Treatment In Los Angeles</h3>
-                    <a href="#" class="tex-black font-bold text-base">Read more</a>
+                    <img
+                        src="https://acss.brixies.co/wp-content/uploads/2023/10/Img-placeholder-16-9-1024x577.png"
+                        alt=""
+                        class="rounded-xl object-cover aspect-square"
+                    />
+                    <h3 class="text-3xl text-white font-normal leading-relaxed">
+                        Shopping Addiction Treatment In Los Angeles
+                    </h3>
+                    <a href="#" class="tex-black font-bold text-base"
+                        >Read more</a
+                    >
                 </div>
             </div>
         </div>
     </section>
-
 </MainLayout>
 
 <style>
@@ -504,5 +574,9 @@ import Button from "../components/Button.astro";
     ul.content-ul li:before {
         content: "\2713"; /* Checkmark icon */
         @apply w-4 m-0 inline-block font-bold;
+    }
+
+    .review-card-shadow{
+        box-shadow: 0 0 0 2px #eae7ea, -8px 8px 0 0 #eae7ea;
     }
 </style>
