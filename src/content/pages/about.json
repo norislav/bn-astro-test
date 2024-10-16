@@ -13,6 +13,8 @@
       "imageTwo": "/bn-astro-test/imgs/about-img-2.jpg"
     }
   },
+
+  
   "coreValues": {
     "heading": "Core Values",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",

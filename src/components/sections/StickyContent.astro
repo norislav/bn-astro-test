@@ -8,9 +8,9 @@ const { heading, text, buttonText, list } = Astro.props.Content;
   <div class="container grid grid-cols-1 md:grid-cols-2 gap-16">
     
     <!-- Left Column: Introduction and Button -->
-    <div class="sticky-content__intro p-8 md:sticky top-10">
-      <h2 class="mb-8">{heading}</h2>
-      <p class="text-lg mb-6">
+    <div class="sticky-content__intro h-max p-8 md:sticky top-10 flex flex-col gap-8 items-start">
+      <h2 class="">{heading}</h2>
+      <p class="text-lg ">
         {text}
       </p>
       <Button buttonText=`${buttonText}` buttonLink="#" buttonClass="secondary-button"/>

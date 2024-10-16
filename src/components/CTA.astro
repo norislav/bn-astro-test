@@ -6,11 +6,11 @@ const { heading, text, buttonText } = Astro.props.Content;
 
 <section class="call-to-action section bg-primary-600">
   <div class="container">
-    <div class="call-to-action__content bg-primary-500 p-10 rounded-lg text-center">
-      <h2 class="call-to-action__heading text-white mb-6">
+    <div class="call-to-action__content bg-primary-500 p-10 rounded-lg text-center flex flex-col gap-8 items-center">
+      <h2 class="call-to-action__heading text-white ">
         {heading}
       </h2>
-      <p class="call-to-action__text text-white mx-auto mb-8">
+      <p class="call-to-action__text text-white mx-auto">
         {text}
       </p>
       
