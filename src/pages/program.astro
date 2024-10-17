@@ -541,42 +541,4 @@ import Button from "../components/Button.astro";
     </section>
 </MainLayout>
 
-<style>
-    .program-hero__heading {
-        @apply text-4xl text-gray-800  md:text-5xl leading-relaxed;
-    }
 
-    .program-hero__heading,
-    .program-hero__logo-wrapper {
-        margin-bottom: 40px !important;
-    }
-
-    .program-hero__container {
-        @apply grid mx-auto md:grid-cols-1 xl:grid-cols-2 gap-10 px-5;
-    }
-    .program-hero__container,
-    .program-container {
-        max-width: 1300px;
-    }
-
-    .program-content-width {
-        width: 100%;
-        max-width: 900px;
-    }
-    ul.content-ul {
-        list-style: none;
-        padding-inline-start: 0;
-        margin: 0;
-    }
-    ul.content-ul li {
-        @apply text-xl mb-5 leading-relaxed;
-    }
-    ul.content-ul li:before {
-        content: "\2713"; /* Checkmark icon */
-        @apply w-4 m-0 inline-block font-bold;
-    }
-
-    .review-card-shadow{
-        box-shadow: 0 0 0 2px #eae7ea, -8px 8px 0 0 #eae7ea;
-    }
-</style>
