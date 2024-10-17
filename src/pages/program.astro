@@ -1,15 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Icon } from "astro-icon/components";
-
 import GeneralData from "../content/general/general.json";
 import AdmissionNextStep from "../components/AdmissionNextStep.astro";
 import Form from "../components/Form.astro";
 import Team from "../components/Team.astro";
+
 import VideoModal from "../components/VideoModal.astro";
 
 import FAQ from "../components/sections/FAQ.astro";
 import Button from "../components/Button.astro";
+import PDF from "../components/sections/PDF.astro";
 ---
 
 <MainLayout title="Program">
@@ -250,24 +251,7 @@ import Button from "../components/Button.astro";
 
     <!-- Download PDF Section -->
 
-    <section class="download-pdf bg-[#D9D9D9] section">
-        <div
-            class="container !max-w-[900px] w-full flex flex-col lg:flex-row gap-5 justify-between"
-        >
-            <div class="flex flex-col items-start">
-                <h2 class="mb-3 font-medium">Download our White Paper</h2>
-                <p class="mb-5">
-                    Empower Your Journey, Embrace Your Potential!
-                </p>
-                <a
-                    href="#"
-                    class="font-semibold text-black text-2xl leading-normal underline"
-                    >Download now!</a
-                >
-            </div>
-            <Icon name="download" class="w-[120px] h-[120px]" />
-        </div>
-    </section>
+    <PDF />
 
     <!-- What We Treat -->
     <section class="program_what-we-treat section">

@@ -17,12 +17,14 @@ body {
 h1,
 .h1 {
   font-size: var(--h1);
+  line-height: 1.25;
 }
 
 h2,
 .h2 {
   font-size: var(--h2);
   margin-bottom: 1rem;
+  line-height: 1.25;
 }
 
 h3,
@@ -40,6 +42,7 @@ h4,
 p {
   font-size: clamp(18px, calc(1.125rem + ((1vw - 3.2px) * 0.2083)), 20px);
   margin-bottom: 1.4rem;
+  max-width: 65ch;
 }
 
 /* Common Global Classes */
@@ -107,8 +110,6 @@ p {
   @apply py-4 px-8 transition-all duration-300 leading-none  text-center rounded-md;
 }
 
-
-
 /* Program page  */
 .program-hero__heading {
   @apply text-4xl text-gray-800  md:text-5xl leading-relaxed;
@@ -144,8 +145,10 @@ ul.content-ul li:before {
   @apply w-4 m-0 inline-block font-bold;
 }
 
-.review-card-shadow{
-  box-shadow: 0 0 0 2px #eae7ea, -8px 8px 0 0 #eae7ea;
+.review-card-shadow {
+  box-shadow:
+    0 0 0 2px #eae7ea,
+    -8px 8px 0 0 #eae7ea;
 }
 
 .clickable-parent::after {
@@ -156,4 +159,3 @@ ul.content-ul li:before {
   z-index: 1;
   cursor: pointer;
 }
-

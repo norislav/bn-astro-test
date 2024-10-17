@@ -3,7 +3,7 @@
 import Button from "../Button.astro";
 
 const HeroData = Astro.props.Content || { heading: "Default Heading", text: "Default text." };
-const GeneralData = Astro.props.GeneralData || { phone: "Default Phone Number" };
+const GeneralData = Astro.props.GeneralData || { phoneNumber: "Default Phone Number" };
 ---
 
 
@@ -15,7 +15,7 @@ const GeneralData = Astro.props.GeneralData || { phone: "Default Phone Number" }
             <p class="hero__text text-lg mb-6">{HeroData.text}</p>
             <div class="hero__actions flex items-center gap-4">
                 <Button buttonText="VERIFY INSURANCE →" buttonLink="#" buttonClass="primary-button" />
-                <span class="hero__phone-number text-lg font-semibold">{GeneralData.phone}</span>
+                <span class="hero__phone-number text-lg font-semibold">{GeneralData.phoneNumber}</span>
             </div>
         </div>
     </div>
