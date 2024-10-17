@@ -1,22 +1,22 @@
 ---
+// Import Button component
 import Button from "../Button.astro";
 
-// Import any additional icons if needed.
-const HeroData = Astro.props.Content;
-const GeneralData = Astro.props.GeneralData;
+const HeroData = Astro.props.Content || { heading: "Default Heading", text: "Default text." };
+const GeneralData = Astro.props.GeneralData || { phone: "Default Phone Number" };
 ---
+
 
 <section class="hero bg-gray-200 py-16 px-4">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-      <!-- Left Content -->
-      <div class="hero__content mb-8 md:mb-0 md:w-1/2">
-        <h1 class="hero__title mb-4 !leading-tight">{HeroData.heading}</h2>
-        <p class="hero__text text-lg mb-6">{HeroData.text}</p>
-        <div class="hero__actions flex items-center gap-4">
-          <Button buttonText=" VERIFY INSURANCE →" buttonLink="#" buttonClass="primary-button"/>
-          <span class="hero__phone-number text-lg font-semibold">{GeneralData.phone}</span>
-          
+        <!-- Left Content -->
+        <div class="hero__content mb-8 md:mb-0 md:w-1/2">
+            <h1 class="hero__title mb-4 !leading-tight">{HeroData.heading}</h1>
+            <p class="hero__text text-lg mb-6">{HeroData.text}</p>
+            <div class="hero__actions flex items-center gap-4">
+                <Button buttonText="VERIFY INSURANCE →" buttonLink="#" buttonClass="primary-button" />
+                <span class="hero__phone-number text-lg font-semibold">{GeneralData.phone}</span>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
