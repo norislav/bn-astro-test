@@ -31,7 +31,7 @@ const limitedPosts = blogPosts.slice(0, count);
           date={formatDate(post.data.date)}
           featuredImg={post.data.featuredImg || '/bn-astro-test/imgs/placeholder.jpg'} 
           readTime={post.data.readingTime || 'Read'}
-          link={`blog/${post.slug}`}
+          link={`/bn-astro-test/blog/${post.slug}`}
         />
       ))}
     </div>

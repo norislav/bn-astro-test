@@ -1,0 +1,15 @@
+---
+import AboutData from '../content/pages/about.json';
+import GeneralData from '../content/general/general.json';
+import MainLayout from "../layouts/MainLayout.astro"
+import Hero from '../components/layout/Hero.astro';
+import BlogSection from '../components/sections/BlogSection.astro';
+
+
+const Data = { heading: "Blog"}
+---
+
+<MainLayout title="About" description="Alcohol and Drug Rehab in Boca Raton, Florida">
+	<Hero Content={Data} GeneralData={GeneralData}/>
+    <BlogSection />
+</MainLayout>
