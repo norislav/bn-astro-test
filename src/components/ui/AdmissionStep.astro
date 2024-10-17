@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+const { name, title, text, icon, modalText } = Astro.props;
+---
+<div class="admission-step shadow-lg rounded-lg text-center p-8">
+  <div class="icon flex items-center justify-center">
+    <p class="text-2xl">{name}</p>
+  </div>
+  <h3 class="text-2xl font-medium">{title}</h3>
+  <p>{text}</p>
+  <button class="read-more-btn" data-modal={name}>Read more</button>
+
+  <!-- Hidden modal -->
+  <div id={name} class="modal hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div class="modal-content bg-white p-6 rounded-lg shadow-lg relative">
+      <button class="close-modal absolute top-2 right-2">X</button>
+      <h4 class="text-xl mb-4">{title}</h4>
+      <p>{modalText}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Styles for the modal -->
+<style>
+  .modal.hidden {
+    display: none;
+  }
+
+  .modal {
+    display: flex;
+  }
+
+  .modal-content {
+    max-width: 500px;
+    width: 100%;
+  }
+</style>
+
+<!-- Client-side script to handle modal open/close -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.read-more-btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        modal.classList.remove('hidden');
+      });
+    });
+
+    const closeButtons = document.querySelectorAll('.close-modal');
+    closeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        modal.classList.add('hidden');
+      });
+    });
+  });
+</script>

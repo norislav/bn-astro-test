@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "heading": "Admissions",
+    "text": "Get help for yourself or a loved one today!",
+    "videoLink": "/path/to/admission-video.mp4"
+  },
+  "cta": {
+    "heading": "Start Your Journey To Recovery Today",
+    "text": "Are you or a loved one struggling with addiction? Discover Health Group is here to help you take the first step towards a healthier, happier life. Our compassionate team is ready to support you through every stage of your recovery journey. Contact us today to learn more about our programs, schedule a visit, or start the admissions process. Your path to recovery begins here.",
+    "buttonText": "Call Us Now!"
+  },
+  "steps": [
+    {
+      "name": "Step 1",
+      "title": "Pre-Screening Clinical Assessment",
+      "text": "Conduct a phone assessment to determine program fit and provide necessary information for prospective patients.",
+      "icon": "star",
+      "modalText": "Further details about the pre-screening process and requirements."
+    },
+    {
+      "name": "Step 2",
+      "title": "Treatment Program And Care Evaluation",
+      "text": "Evaluate pre-screening results to determine the appropriate treatment program and level of care using ASAM criteria.",
+      "icon": "star",
+      "modalText": "Additional information about treatment program evaluation."
+    },
+    {
+      "name": "Step 3",
+      "title": "Payment Options For Treatment",
+      "text": "Explore insurance and self-pay options to cover the cost of treatment.",
+      "icon": "star",
+      "modalText": "Details about different payment options available."
+    },
+    {
+      "name": "Step 4",
+      "title": "Prepare For Your Stay",
+      "text": "Pack appropriately and follow guidelines to ensure a comfortable and compliant stay.",
+      "icon": "star",
+      "modalText": "Details on what to bring and how to prepare."
+    }
+  ]
+}

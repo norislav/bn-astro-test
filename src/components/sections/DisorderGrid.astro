@@ -9,79 +9,84 @@ import { Icon } from 'astro-icon/components';
       Brand North specializes in treating a wide range of substance use disorders, focusing on addiction as the primary condition. Our comprehensive care also addresses co-occurring mental health conditions. Some of the specific substances and conditions we treat include:
     </p>
 
-    <div class="what-we-treat__grid grid grid-cols-1 md:grid-cols-3 border border-gray-300 rounded-2xl overflow-hidden">
+    <div class="what-we-treat__grid grid grid-cols-1 md:grid-cols-4 gap-4 overflow-hidden">
       
-      <!-- Condition 1 -->
       <div class="treat-card">
         <div class="treat-card__icon mb-4">
-          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+          <Icon name="drugs/icon-alcohol" class="w-20 h-20 text-gray-500 mx-auto" />
         </div>
         <h3 class="treat-card__title text-2xl font-medium">Alcohol use disorder</h3>
       </div>
 
-      <!-- Condition 2 -->
       <div class="treat-card">
         <div class="treat-card__icon mb-4">
-          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+          <Icon name="drugs/icon-opium" class="w-20 h-20 text-gray-500 mx-auto" />
         </div>
         <h3 class="treat-card__title text-2xl font-medium">Opioid use disorder</h3>
       </div>
 
-      <!-- Condition 3 -->
       <div class="treat-card">
         <div class="treat-card__icon mb-4">
-          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+          <Icon name="drugs/icon-cocaine" class="w-20 h-20 text-gray-500 mx-auto" />
         </div>
         <h3 class="treat-card__title text-2xl font-medium">Cocaine use disorder</h3>
       </div>
 
-      <!-- Condition 4 -->
       <div class="treat-card">
         <div class="treat-card__icon mb-4">
-          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+          <Icon name="drugs/icon-meth" class="w-20 h-20 text-gray-500 mx-auto" />
         </div>
         <h3 class="treat-card__title text-2xl font-medium">Methamphetamine use disorder</h3>
       </div>
 
-      <!-- Condition 5 -->
       <div class="treat-card">
         <div class="treat-card__icon mb-4">
-          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+          <Icon name="drugs/icon-weed" class="w-20 h-20 text-gray-500 mx-auto" />
         </div>
         <h3 class="treat-card__title text-2xl font-medium">Marijuana use disorder</h3>
       </div>
 
-      <!-- Condition 6 -->
       <div class="treat-card">
         <div class="treat-card__icon mb-4">
-          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+          <Icon name="drugs/icon-pills-2" class="w-20 h-20 text-gray-500 mx-auto" />
         </div>
         <h3 class="treat-card__title text-2xl font-medium">Prescription drug abuse</h3>
       </div>
 
-      <!-- Condition 7 -->
       <div class="treat-card">
         <div class="treat-card__icon mb-4">
-          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
-        </div>
-        <h3 class="treat-card__title text-2xl font-medium">Kratom use disorder</h3>
-      </div>
-
-      <!-- Condition 8 -->
-      <div class="treat-card">
-        <div class="treat-card__icon mb-4">
-          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+          <Icon name="drugs/icon-heroin" class="w-20 h-20 text-gray-500 mx-auto" />
         </div>
         <h3 class="treat-card__title text-2xl font-medium">Heroin use disorder</h3>
       </div>
 
-      <!-- Condition 9 -->
       <div class="treat-card">
         <div class="treat-card__icon mb-4">
-          <Icon name="star" class="w-20 h-20 text-gray-500 mx-auto" />
+          <Icon name="drugs/icon-pills" class="w-20 h-20 text-gray-500 mx-auto" />
         </div>
         <h3 class="treat-card__title text-2xl font-medium">Benzodiazepine abuse</h3>
       </div>
+
+      <div class="treat-card">
+        <div class="treat-card__icon mb-4">
+          <Icon name="drugs/icon-lsd" class="w-20 h-20 text-gray-500 mx-auto" />
+        </div>
+        <h3 class="treat-card__title text-2xl font-medium">LSD use disorder</h3>
+      </div>
+
+      <div class="treat-card">
+        <div class="treat-card__icon mb-4">
+          <Icon name="drugs/icon-inhalator" class="w-20 h-20 text-gray-500 mx-auto" />
+        </div>
+        <h3 class="treat-card__title text-2xl font-medium">Inhalator abuse</h3>
+      </div>    
+
+      <div class="treat-card">
+        <div class="treat-card__icon mb-4">
+          <Icon name="drugs/icon-mushroom" class="w-20 h-20 text-gray-500 mx-auto" />
+        </div>
+        <h3 class="treat-card__title text-2xl font-medium">Psilocybin use disorder</h3>
+      </div>      
 
     </div>
   </div>
@@ -89,6 +94,7 @@ import { Icon } from 'astro-icon/components';
 
 <style>
   .treat-card{
-    @apply p-12 border border-gray-300;
+    @apply bg-white p-12 shadow rounded;
   }
+
 </style>

@@ -1,0 +1,22 @@
+---
+import AdmissionNextStep from '../components/AdmissionNextStep.astro';
+import FAQ from '../components/sections/FAQ.astro';
+import Hero from '../components/layout/Hero.astro';
+import AdmissionSteps from '../components/sections/AdmissionSteps.astro';
+import PDF from '../components/sections/PDF.astro';
+import Map from '../components/Map.astro';
+import GeneralData from '../content/general/general.json';
+import AdmissionsData from '../content/pages/admissions.json'
+import MainLayout from '../layouts/MainLayout.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<MainLayout title="Admissions" description="Alcohol and Drug Rehab in Boca Raton, Florida">
+    <Hero Content={AdmissionsData.hero} GeneralData={GeneralData} />
+    <AdmissionSteps />
+    <PDF />
+    <AdmissionNextStep />
+    <FAQ />
+    <Map />
+    <CTA Content={AdmissionsData.cta}/>
+</MainLayout>
