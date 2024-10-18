@@ -1,8 +1,8 @@
 ---
-const videoSrc = "https://www.w3schools.com/html/mov_bbb.mp4"; // Your video source
+const {image, videoSrc} = Astro.props;
 ---
 
-<div>
+<div class="md:w-[60%] w-full">
   <!-- Video Thumbnail Button -->
   <button
     class="relative flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group"
@@ -11,10 +11,9 @@ const videoSrc = "https://www.w3schools.com/html/mov_bbb.mp4"; // Your video sou
   >
     <img
       class="rounded-xl shadow-xl transition-shadow duration-300 ease-in-out"
-      src="https://acss.brixies.co/wp-content/uploads/2023/10/video-placeholder-1024x691.png"
+      src={image}
       width="1024"
       height="691"
-      alt="Modal video thumbnail"
     />
     <!-- Play Icon -->
     <svg class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
@@ -28,7 +27,7 @@ const videoSrc = "https://www.w3schools.com/html/mov_bbb.mp4"; // Your video sou
     <div class="flex p-6">
       <div class="max-w-5xl h-full flex items-center">
         <div class="w-full max-h-full rounded-xl shadow-2xl aspect-video bg-black overflow-hidden">
-          <video width="1920" height="1080" loop controls>
+          <video width="1920" height="1080" loop controls >
             <source src={videoSrc} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
