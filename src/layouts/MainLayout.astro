@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
+import Data from "../content/general/general.json";
 
 // Accessing the title from Astro.props
 const { title, description } = Astro.props;
@@ -15,6 +16,19 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<title>{title}</title>
+		<style>
+			#contact-section {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease;
+}
+
+#contact-section.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+		</style>
 	</head>
 	<body>
         <Header />
@@ -22,5 +36,23 @@ const { title, description } = Astro.props;
             <slot />
         </main>
 		<Footer />
+		<section class="bg-primary-500 w-full fixed bottom-0 py-3 " id="contact-section">
+			<div class="container flex items-center justify-center">
+				<a href={`tel:${Data.phoneNumber}`} class="secondary-button uppercase">Call Now: {Data.phoneNumber}</a>
+			</div>
+		</section>
+
+		<script>
+			window.addEventListener('scroll', () => {
+    const section = document.getElementById('contact-section');
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 200) {
+        section.classList.add('visible');
+    } else {
+        section.classList.remove('visible');
+    }
+});
+		</script>
 	</body>
 </html>
