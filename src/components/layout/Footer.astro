@@ -1,9 +1,12 @@
 ---
+
+const currentYear = new Date().getFullYear();
+
 import { Icon } from "astro-icon/components";
 import Data from "../../content/general/general.json";
 ---
 
-<footer class="footer bg-[#b7fae633] text-white py-16">
+<footer class="footer bg-[#b7fae633] text-white pt-16 pb-24">
   <div
     class="w-full max-w-[1240px] grid gap-11 md:grid-cols-4 grid-cols-1 mx-auto px-5 mb-5 items-center border-b border-[#dddedf]"
   >
@@ -96,7 +99,7 @@ import Data from "../../content/general/general.json";
   </div>
 
   <div class="w-full max-w-[800px] mx-auto  gap-3 flex flex-col items-center px-5">
-    <p class="text-center text-black text-base mb-0">Copyright © 2024 BH Framework ACF. All rights reserved.</p>
+    <p class="text-center text-black text-base mb-0">Copyright © {currentYear} BH Framework ACF. All rights reserved.</p>
     <p class="text-center text-[#043e2db3] text-base mb-0">
       We improve our products and advertising by using Microsoft Clarity to see
       how you use our website. By using our site, you agree that we and

@@ -163,6 +163,11 @@ ul.content-ul li:before {
 
 
 /* Hero Section */
+.hero-section{
+  padding-top: clamp(110px, calc(6.875rem + ((1vw - 3.2px) * 7.9167)), 186px);
+  padding-bottom: clamp(48px, calc(3rem + ((1vw - 3.2px) * 4.375)), 90px);
+}
+
 .hero:before{
   
   background-image: linear-gradient(90deg, #283854, rgba(0, 73, 92, 0.17));
@@ -175,3 +180,4 @@ ul.content-ul li:before {
   pointer-events: none;
 
 }
+
