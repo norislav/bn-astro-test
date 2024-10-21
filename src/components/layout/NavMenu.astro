@@ -5,16 +5,17 @@ import Button from "../Button.astro";
 
 // Define your menu items
 const menuItems = [
-    { name: "About", link: "/bn-astro-test/about" },
-    { name: "Admissions", link: "/bn-astro-test/admissions" },
+  
 ];
 
 const otherMenuItems = [
     { name: "Privacy Policy", link: "/bn-astro-test/privacy" },
     { name: "Term & Condition", link: "/bn-astro-test/terms" },
 ];
+
 // Define your dropdown menus
 const dropdownMenus = [
+
     {
         title: "What We Treat",
         titleLink: "/bn-astro-test/programarchive",
@@ -27,6 +28,15 @@ const dropdownMenus = [
         title: "How We Treat",
         titleLink: "/bn-astro-test/treatmentarchive",
         items: [
+            // Add more items as needed
+        ],
+    },
+    {
+        title: "About",
+        titleLink: "/bn-astro-test/about",
+        items: [
+            { name: "Team", link: "/bn-astro-test/team" },
+            { name: "Admissions", link: "/bn-astro-test/admissions" },
             // Add more items as needed
         ],
     },
